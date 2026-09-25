@@ -11,13 +11,14 @@
   <header class="toolbar no-print">
     <div>
       <strong>三種の神器 超入門</strong>
-      <span class="muted">はじめに・第1章まで本文入り</span>
+      <span class="muted">はじめに・第1章・第2章まで本文入り</span>
     </div>
     <nav class="toc-nav">
       <a href="#cover">表紙</a>
       <a href="#toc">目次</a>
       <a href="#preface">はじめに</a>
       <a href="#ch1">第1章</a>
+      <a href="#ch2">第2章</a>
     </nav>
     <div class="toolbar-actions">
       <button type="button" onclick="kindlePreviewReload()" title="HTML/CSSを再読み込み（表示位置は維持）">更新</button>
@@ -52,7 +53,7 @@
         <ol class="toc-list-text">
           <li><span class="toc-label">はじめに</span><span class="toc-leader"></span><span class="toc-page">3</span></li>
           <li><span class="toc-num">1</span><span class="toc-label">三種の神器の全体像</span><span class="toc-leader"></span><span class="toc-page">6</span></li>
-          <li><span class="toc-num">2</span><span class="toc-label">Grok Bot — 方針と Go/No-Go の司令塔</span><span class="toc-leader"></span><span class="toc-page">—</span></li>
+          <li><span class="toc-num">2</span><span class="toc-label">Grok Bot — 方針と Go/No-Go の司令塔</span><span class="toc-leader"></span><span class="toc-page">13</span></li>
           <li><span class="toc-num">3</span><span class="toc-label">Cursor Projects — 長い案件の箱</span><span class="toc-leader"></span><span class="toc-page">—</span></li>
           <li><span class="toc-num">4</span><span class="toc-label">pstack — 検証を先に置く</span><span class="toc-leader"></span><span class="toc-page">—</span></li>
           <li><span class="toc-num">5</span><span class="toc-label">三種をつなぐ — 方針 → 実装 → 検証</span><span class="toc-leader"></span><span class="toc-page">—</span></li>
@@ -278,6 +279,208 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
         </div>
         <p class="next-hint">次の章へ — Grok Bot</p>
         <div class="folio-num">12</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2">
+      <p class="sheet-label no-print">第2章 · 章扉</p>
+      <article class="page page-chapter">
+        <div class="chapter-center chapter-center-text">
+          <p class="chapter-num-text">2</p>
+          <h2 class="chapter-title-text">Grok Bot</h2>
+          <p class="chapter-sub-text">方針と Go/No-Go の司令塔</p>
+        </div>
+        <div class="folio-num">13</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-body-1">
+      <p class="sheet-label no-print">第2章 · 2.1 概要</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">2.1</span>
+          <h3 class="sec-title">概要</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>Chapter 1 の三欄でいうと、ここは「方針」の欄の話です。衛生ログを進めていたころ、僕が一番つまずいたのは実装そのものではなかった。写真はいつ必須にするか。閉店後だけか、開店前もか。日次の締めは誰が押すか。答えは頭のどこかにあるのに、チャットへ投げるとすぐカラム名やボタンの話に流れます。決まった気がする。翌朝読むと「作って」だけが残っている。</p>
+          <p>そこに置いているのが Grok Bot です。方針と Go / No-Go。司令塔、と呼んでいます。実装コードは書かせない。専門家や Cursor の Project に振る。衛生ログでは、写真必須の条件も締め方も、ここで一文にしてから先に出しました。「やるか」「どこまでか」「やらない範囲」が短いメモで残るまで、実装側には触らない。夜に読み返して迷子になる回数が減ったのは、決まったことが短く残るようになったからだと思います。</p>
+        </div>
+        <div class="folio-num">14</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-body-1b">
+      <p class="sheet-label no-print">第2章 · 2.1 概要の続き</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="body-prose">
+          <p>何でも答えてくれる場所、という意味ではありません。答えてくれる場所が一つだと、判断と実装の境目が溶ける。僕がやっているのは逆です。ここには方針だけを載せる。コードの断片は貼らないし、テーブル設計の相談もボタンの位置も、このスレッドではやらない。固まったら実装は Project に渡す。振る先は案件によって違って、衛生ログ本体なら Cursor の箱、別の専門家がいるならそちらです。司令塔のログに差分が混ざらないことだけが、僕にとっては大事でした。</p>
+          <p>電子書籍の作業とアプリの案件を同じ司令塔で見ている今も、Go の前に実装を始めない一点は変えていません。新規案件を増やしたくなる日はある。増やす前に Go を取る、と決めておくと夜の自分が楽です。機能一覧を並べるつもりはありません。掴んでいる使い方だけを書きます。</p>
+        </div>
+        <div class="folio-num">15</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-body-2">
+      <p class="sheet-label no-print">第2章 · 2.2 やってみよう</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">2.2</span>
+          <h3 class="sec-title">やってみよう</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>画面を開きます。案件は小さくて構いません。衛生ログなら、「閉店後のチェックで写真を必須にするか」くらいで足ります。Chapter 1 で紙に書いた「方針」の欄がある人は、それを持ってきてください。ない人は、いま決めたいことを一文でメモしておきます。コードの話は書かない。決めることだけです。</p>
+          <p>Grok Bot のチャットを開きます。新しいスレッドでも、既存の司令塔用でも構いません。僕は案件ごとに方針用の場所を分けていますが、最初は一つで大丈夫です。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。Grok Bot の新規チャット、または司令塔用スレッドを開いた画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: 方針用のスレッドを開く。実装用のチャットと混ぜない。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">16</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-body-2b">
+      <p class="sheet-label no-print">第2章 · 2.2 依頼</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="body-prose">
+          <p>依頼文は短くします。僕がよく送るのは、だいたい次のような文面です。</p>
+          <p>「衛生ログで、閉店後の日次チェックに写真必須を入れるか決めたい。実装コードは書かないで。やる／やらない、やるならどこまで、やらない範囲、を短く整理して。最後に Go か No-Go を出して。」</p>
+          <p>「書かないで」を明示し、決める軸を狭くし、Go / No-Go を求める。長く説明しすぎない方が、返事も短くなります。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。方針の依頼を入力した、送信直前の画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: 「実装コードは書かないで」と「Go / No-Go」を一文に入れて送る。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">17</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-body-2c">
+      <p class="sheet-label no-print">第2章 · 2.2 返事</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="body-prose">
+          <p>返事が返ってきたら、長さを見る。カラム名や API の話が混ざっていたら、依頼がまだ混線しています。僕は「方針だけ。実装は触れないで」と返して、短いメモに戻してもらいます。「閉店後は必須／開店前は任意／今回は通知はやらない」くらいになれば十分です。仕様書はいりません。</p>
+          <p>Go なら、そのメモを実装側に渡す材料にします。渡す先は次の章の Cursor Projects で、ここではまだ箱を開きません。No-Go なら、やらない理由を一行残して終わります。どちらでもいい。決まった、という状態が残れば成功です。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。Go または No-Go と、短い方針メモが返ってきたチャット。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: 決まったことが短く残っているかだけ見る。コードが混ざっていたら依頼をやり直す。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">18</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-body-2d">
+      <p class="sheet-label no-print">第2章 · 2.2 メモ</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="body-prose">
+          <p>自分のメモへ一言写しておきます。紙の「方針」欄でもメモアプリでもいい。「Go。閉店後は写真必須。開店前は任意。通知は今回やらない」。日付がなくても、案件名があれば後から追えます。司令塔のスレッドは消さない。あとで「あれ、必須にしたんだっけ」と迷ったときに戻れる場所が一つある。それがこの章のゴールです。</p>
+          <p>実装の画面はまだ開きません。Go の前に差分を見始めると、また朝の決定が夜の試行錯誤に埋もれます。箱を開くのは次の章です。いまは、方針と Go / No-Go が短い形で残っていれば十分です。</p>
+        </div>
+        <div class="folio-num">19</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-terms">
+      <p class="sheet-label no-print">第2章 · キーワード早見</p>
+      <article class="page page-table">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="page-heading">
+          <h2 class="page-title">キーワード早見</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <p class="caption">あとから見返す用です。厳密な定義ではなく、この本でのたとえです。</p>
+        <table class="text-table">
+          <thead>
+            <tr>
+              <th>ことば</th>
+              <th>この本でのたとえ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>司令塔</td>
+              <td>方針だけを置くスレッド。差分は混ぜない</td>
+            </tr>
+            <tr>
+              <td>書かないで</td>
+              <td>実装コードを返させない、依頼の一言</td>
+            </tr>
+            <tr>
+              <td>Go</td>
+              <td>やる。短いメモが残ってから箱を開く</td>
+            </tr>
+            <tr>
+              <td>No-Go</td>
+              <td>やらない。理由を一行残して終わる</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="folio-num">20</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-summary">
+      <p class="sheet-label no-print">第2章 · まとめ</p>
+      <article class="page page-summary">
+        <div class="page-heading">
+          <h2 class="page-title">この章のまとめ</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <ul class="text-list">
+          <li>方針の依頼に「実装コードは書かないで」と「Go / No-Go」を入れた</li>
+          <li>返事が、やる範囲とやらない範囲の短いメモになっている</li>
+          <li>コードが混ざっていたら、方針だけに戻してもらった</li>
+          <li>実装の箱は、まだ開いていない</li>
+        </ul>
+        <div class="callout callout-point">
+          <div class="callout-point-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" focusable="false">
+              <path d="M18 42 V18.5c0-1.4 1-2.5 2.4-2.5h.2c1.3 0 2.4 1.1 2.4 2.5V28
+M23 28 V12.2c0-1.5 1.1-2.7 2.6-2.7s2.6 1.2 2.6 2.7V28
+M28.2 28 V14.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V28
+M33.2 28 V17.2c0-1.3 1-2.4 2.3-2.4 1.4 0 2.5 1.1 2.5 2.5V30.5
+c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 22.5c-2.2-1.8-3.8-1.5-5.2.4-1.2 1.6-.4 3.4 1.2 4.2L18 29"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="callout-body">
+            <p class="callout-kicker callout-point-kicker">ポイント</p>
+            <p>Go のメモが一行残っていれば、次は Cursor Projects の箱にそれを渡します。司令塔のスレッドでは、まだコードを書き始めません。</p>
+          </div>
+        </div>
+        <p class="next-hint">次の章へ — Cursor Projects</p>
+        <div class="folio-num">21</div>
       </article>
     </section>
 
