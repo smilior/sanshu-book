@@ -11,7 +11,7 @@
   <header class="toolbar no-print">
     <div>
       <strong>三種の神器 超入門</strong>
-      <span class="muted">はじめに・第1章から第4章まで本文入り</span>
+      <span class="muted">はじめに・第1章から第5章まで本文入り</span>
     </div>
     <nav class="toc-nav">
       <a href="#cover">表紙</a>
@@ -21,6 +21,7 @@
       <a href="#ch2">第2章</a>
       <a href="#ch3">第3章</a>
       <a href="#ch4">第4章</a>
+      <a href="#ch5">第5章</a>
     </nav>
     <div class="toolbar-actions">
       <button type="button" onclick="kindlePreviewReload()" title="HTML/CSSを再読み込み（表示位置は維持）">更新</button>
@@ -58,7 +59,7 @@
           <li><span class="toc-num">2</span><span class="toc-label">Grok Bot — 方針と Go/No-Go の司令塔</span><span class="toc-leader"></span><span class="toc-page">13</span></li>
           <li><span class="toc-num">3</span><span class="toc-label">Cursor Projects — 長い案件の箱</span><span class="toc-leader"></span><span class="toc-page">22</span></li>
           <li><span class="toc-num">4</span><span class="toc-label">pstack — 検証を先に置く</span><span class="toc-leader"></span><span class="toc-page">30</span></li>
-          <li><span class="toc-num">5</span><span class="toc-label">三種をつなぐ — 方針 → 実装 → 検証</span><span class="toc-leader"></span><span class="toc-page">—</span></li>
+          <li><span class="toc-num">5</span><span class="toc-label">三種をつなぐ — 方針 → 実装 → 検証</span><span class="toc-leader"></span><span class="toc-page">37</span></li>
           <li><span class="toc-label">おわりに</span><span class="toc-leader"></span><span class="toc-page">—</span></li>
         </ol>
         <div class="folio-num">2</div>
@@ -827,6 +828,168 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
         </div>
         <p class="next-hint">次の章へ — 三種をつなぐ</p>
         <div class="folio-num">36</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5">
+      <p class="sheet-label no-print">第5章 · 章扉</p>
+      <article class="page page-chapter">
+        <div class="chapter-center chapter-center-text">
+          <p class="chapter-num-text">5</p>
+          <h2 class="chapter-title-text">三種をつなぐ</h2>
+          <p class="chapter-sub-text">方針 → 実装 → 検証</p>
+        </div>
+        <div class="folio-num">37</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5-body-1">
+      <p class="sheet-label no-print">第5章 · 5.1 概要</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第5章 三種をつなぐ</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">5.1</span>
+          <h3 class="sec-title">概要</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>電子書籍の作業と衛生ログを、同じ司令塔で見ています。箱は分けています。Go の前に実装を始めない、という一点だけは、どちらの案件でも変えていません。見取り図は単純です。方針は Grok Bot。実装は Project。検証の一行は pstack。同じチャットに三つを戻しません。</p>
+          <p>新規の案件を増やしたくなる日はあります。その日に箱を先に作ると、夜にはまた「作って」だけが残ります。増やす前に Go を取る。No-Go なら、箱も検証の一行も要りません。衛生ログの通知を足したくなった夜が、ちょうどそれでした。司令塔で No-Go にして、箱は開きませんでした。</p>
+        </div>
+        <div class="folio-num">38</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5-body-2">
+      <p class="sheet-label no-print">第5章 · 5.2 やってみよう</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第5章 三種をつなぐ</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">5.2</span>
+          <h3 class="sec-title">やってみよう</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>小さなタスクを一つだけ通します。衛生ログの「閉店後は写真必須」のままで構いません。新しい機能は足しません。紙の三欄を横に置きます。</p>
+          <p>司令塔で、Go か No-Go を取ります。実装コードは書かせません。Chapter 2 で送った依頼のままで足ります。No-Go なら、理由を一行残して、ここで終わります。成功です。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。司令塔に Go または No-Go が残った画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: コードが混ざっていない短いメモだけを見る。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">39</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5-body-2b">
+      <p class="sheet-label no-print">第5章 · 5.2 箱に渡す</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第5章 三種をつなぐ</span>
+        </div>
+        <div class="body-prose">
+          <p>Go なら、その一行を Project に渡します。「範囲外はやらない」を添えます。Chapter 3 で開いた箱があれば、それを使います。今日は新しい箱を増やしません。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。既存の Project に方針の一行を渡した画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: 箱は増やさず、残してある箱にメモを渡す。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">40</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5-body-2c">
+      <p class="sheet-label no-print">第5章 · 5.2 三つ残す</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第5章 三種をつなぐ</span>
+        </div>
+        <div class="body-prose">
+          <p>差分を見る前に、検証の一行を読み返します。Chapter 4 で書いたものがあれば、今日のタスクに合っているかだけ見ます。合っていなければ書き直します。衛生ログなら「写真がアップロードできなかったとき、その回のチェックは残す」。テストの全文は、まだ書きません。</p>
+          <p>通ったあとに残るものは三つです。司令塔の短いメモ。Project の箱の名前。検証の一行。どれか欠けていたら、その欄に戻ります。三つ揃ったら、この章は終わりです。</p>
+        </div>
+        <div class="folio-num">41</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5-terms">
+      <p class="sheet-label no-print">第5章 · キーワード早見</p>
+      <article class="page page-table">
+        <div class="running-head">
+          <span class="running-text">第5章 三種をつなぐ</span>
+        </div>
+        <div class="page-heading">
+          <h2 class="page-title">キーワード早見</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <p class="caption">あとから見返す用です。厳密な定義ではなく、この本でのたとえです。</p>
+        <table class="text-table">
+          <thead>
+            <tr>
+              <th>ことば</th>
+              <th>この本でのたとえ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>一本のルート</td>
+              <td>方針のメモ、箱の名前、検証の一行が揃った状態</td>
+            </tr>
+            <tr>
+              <td>同じ司令塔</td>
+              <td>電子書籍とアプリの Go を、一つの方針スレッドで見る</td>
+            </tr>
+            <tr>
+              <td>箱を増やさない</td>
+              <td>Go の前に、新しい Project を作らない</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="folio-num">42</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5-summary">
+      <p class="sheet-label no-print">第5章 · まとめ</p>
+      <article class="page page-summary">
+        <div class="page-heading">
+          <h2 class="page-title">この章のまとめ</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <ul class="text-list">
+          <li>小さなタスク一つで、方針から検証の一行まで通した</li>
+          <li>No-Go なら、そこで終えてよい</li>
+          <li>Go なら、既存の箱にメモを渡し、新しい箱は作らなかった</li>
+          <li>残ったのは、司令塔のメモ、箱の名前、検証の一行</li>
+        </ul>
+        <div class="callout callout-point">
+          <div class="callout-point-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" focusable="false">
+              <path d="M18 42 V18.5c0-1.4 1-2.5 2.4-2.5h.2c1.3 0 2.4 1.1 2.4 2.5V28
+M23 28 V12.2c0-1.5 1.1-2.7 2.6-2.7s2.6 1.2 2.6 2.7V28
+M28.2 28 V14.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V28
+M33.2 28 V17.2c0-1.3 1-2.4 2.3-2.4 1.4 0 2.5 1.1 2.5 2.5V30.5
+c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 22.5c-2.2-1.8-3.8-1.5-5.2.4-1.2 1.6-.4 3.4 1.2 4.2L18 29"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="callout-body">
+            <p class="callout-kicker callout-point-kicker">ポイント</p>
+            <p>三つ揃った夜は、差分の中身を見ても迷子になりにくいです。本命の案件でも、この順だけ守ります。</p>
+          </div>
+        </div>
+        <p class="next-hint">次はおわりに — 本命の案件で回すときのメモ</p>
+        <div class="folio-num">43</div>
       </article>
     </section>
 
