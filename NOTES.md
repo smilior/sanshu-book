@@ -1,6 +1,26 @@
-# この本だけのルール
+# この本だけのルール（三種の神器 超入門）
 
-- 題材: 三種の神器（Grok Bot / Cursor Projects / pstack）
-- 声: 僕目線・Dify本型（概要のあとやってみよう）
-- 品質ゲート: Jev で AIっぽさ（llm_style / ai_written）を見てから社長へ
-- ひな形リポ smilior/kindle-template は改変しない
+## 書誌
+
+| 項目 | 内容 |
+| --- | --- |
+| 書名 | 三種の神器 超入門 |
+| 副題 | Grok Bot・Cursor Projects・pstackで、方針と実装を分けてみよう |
+| 著者 | 中川 将広 |
+| 読者 | Grok Bot と Cursor を使い始めていて、方針と実装が同じ場所に溜まって疲れている人 |
+
+## ことば・トーン
+
+| 方針 | 内容 |
+| --- | --- |
+| 一人称 | 僕 |
+| 型 | Dify型。各 Chapter は概要のあと、やってみよう |
+| 煽り | なし |
+| 日付注記 | 執筆時点ははじめにのページ下部。画面の文言は変わる前提 |
+| 体験の芯 | 衛生ログで、方針と実装が同じチャットに混ざった話 |
+
+## 品質ゲート
+
+Jev で AIっぽさ（llm_style / llm_style_ja / ai_written / rhythm）を見てから社長へ。CLI が無い章は `drafts/jev-NN-memo.md` に未実行とコマンド結果を残す。
+
+ひな形リポ smilior/kindle-template は改変しない。見本 `examples/` は編集しない。画面キャプチャは、実画面が無いあいだプレースホルダにする。
