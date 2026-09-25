@@ -11,7 +11,7 @@
   <header class="toolbar no-print">
     <div>
       <strong>三種の神器 超入門</strong>
-      <span class="muted">はじめに・第1章から第3章まで本文入り</span>
+      <span class="muted">はじめに・第1章から第4章まで本文入り</span>
     </div>
     <nav class="toc-nav">
       <a href="#cover">表紙</a>
@@ -20,6 +20,7 @@
       <a href="#ch1">第1章</a>
       <a href="#ch2">第2章</a>
       <a href="#ch3">第3章</a>
+      <a href="#ch4">第4章</a>
     </nav>
     <div class="toolbar-actions">
       <button type="button" onclick="kindlePreviewReload()" title="HTML/CSSを再読み込み（表示位置は維持）">更新</button>
@@ -56,7 +57,7 @@
           <li><span class="toc-num">1</span><span class="toc-label">三種の神器の全体像</span><span class="toc-leader"></span><span class="toc-page">6</span></li>
           <li><span class="toc-num">2</span><span class="toc-label">Grok Bot — 方針と Go/No-Go の司令塔</span><span class="toc-leader"></span><span class="toc-page">13</span></li>
           <li><span class="toc-num">3</span><span class="toc-label">Cursor Projects — 長い案件の箱</span><span class="toc-leader"></span><span class="toc-page">22</span></li>
-          <li><span class="toc-num">4</span><span class="toc-label">pstack — 検証を先に置く</span><span class="toc-leader"></span><span class="toc-page">—</span></li>
+          <li><span class="toc-num">4</span><span class="toc-label">pstack — 検証を先に置く</span><span class="toc-leader"></span><span class="toc-page">30</span></li>
           <li><span class="toc-num">5</span><span class="toc-label">三種をつなぐ — 方針 → 実装 → 検証</span><span class="toc-leader"></span><span class="toc-page">—</span></li>
           <li><span class="toc-label">おわりに</span><span class="toc-leader"></span><span class="toc-page">—</span></li>
         </ol>
@@ -662,6 +663,170 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
         </div>
         <p class="next-hint">次の章へ — pstack</p>
         <div class="folio-num">29</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4">
+      <p class="sheet-label no-print">第4章 · 章扉</p>
+      <article class="page page-chapter">
+        <div class="chapter-center chapter-center-text">
+          <p class="chapter-num-text">4</p>
+          <h2 class="chapter-title-text">pstack</h2>
+          <p class="chapter-sub-text">検証を先に置く</p>
+        </div>
+        <div class="folio-num">30</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4-body-1">
+      <p class="sheet-label no-print">第4章 · 4.1 概要</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第4章 pstack</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">4.1</span>
+          <h3 class="sec-title">概要</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>三欄の残りの一つが、ここです。僕が pstack と呼んでいるのは、Cursor のプラグインです。入れ方は <code>/add-plugin pstack</code> のあと <code>/setup-pstack</code>。完璧なテスト設計の話ではありません。動いてから困るより、困る条件を先に書いておくための道具、という掴み方をしています。</p>
+          <p>衛生ログでは、写真のアップロードに失敗したあとで直すより、「失敗したとき、その回のログは残すか」を先に一行書いておいた方が手戻りが少なかった。Chapter 3 の箱で差分を見始める前に、その一行の置き場を決めます。モデルを誰に振るか、といった細かい答えはセットアップの質問に任せます。この章で残したいのは、コマンドが通ったことと、困る場所の名前です。</p>
+        </div>
+        <div class="folio-num">31</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4-body-2">
+      <p class="sheet-label no-print">第4章 · 4.2 やってみよう</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第4章 pstack</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">4.2</span>
+          <h3 class="sec-title">やってみよう</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>Cursor のチャットを開きます。実装の箱でも、いつものチャットでも、プラグインを入れられる場所で構いません。<code>/add-plugin pstack</code> を送ります。入った表示が出るまで待ちます。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。/add-plugin pstack を送ったあとの画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: プラグインを入れる。入った表示が出るまで待つ。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">32</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4-body-2b">
+      <p class="sheet-label no-print">第4章 · 4.2 セットアップ</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第4章 pstack</span>
+        </div>
+        <div class="body-prose">
+          <p>続いて <code>/setup-pstack</code> を送ります。質問が来たら、画面に出た順に答えます。モデルの名前で迷ったら、いま自分が普段使っているもので足ります。予算や役割の話で止まりそうなら、この本のゴールはそこではありません。セットアップが最後まで進むことだけ確認して、先に進みます。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。/setup-pstack の質問、または完了の画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: セットアップの質問は、出た順に答える。最適化は後回しでよい。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">33</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4-body-2c">
+      <p class="sheet-label no-print">第4章 · 4.2 一行</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第4章 pstack</span>
+        </div>
+        <div class="body-prose">
+          <p>進んだら、紙の「検証」欄の一行を書きます。衛生ログなら「写真がアップロードできなかったとき、その回のチェックは残す」。テストの全文は書きません。差分を開く前に、困る場所の名前が残っていれば、この章は終わりです。</p>
+        </div>
+        <div class="folio-num">34</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4-terms">
+      <p class="sheet-label no-print">第4章 · キーワード早見</p>
+      <article class="page page-table">
+        <div class="running-head">
+          <span class="running-text">第4章 pstack</span>
+        </div>
+        <div class="page-heading">
+          <h2 class="page-title">キーワード早見</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <p class="caption">あとから見返す用です。厳密な定義ではなく、この本でのたとえです。</p>
+        <table class="text-table">
+          <thead>
+            <tr>
+              <th>ことば</th>
+              <th>この本でのたとえ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>pstack</td>
+              <td>困る条件を、実装より先に書いておくプラグイン</td>
+            </tr>
+            <tr>
+              <td>/add-plugin pstack</td>
+              <td>プラグインを入れるときのコマンド</td>
+            </tr>
+            <tr>
+              <td>/setup-pstack</td>
+              <td>入れたあとに、質問へ答えて整えるコマンド</td>
+            </tr>
+            <tr>
+              <td>困る条件</td>
+              <td>動いてから直したくない場所を、一行で書いたもの</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="folio-num">35</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4-summary">
+      <p class="sheet-label no-print">第4章 · まとめ</p>
+      <article class="page page-summary">
+        <div class="page-heading">
+          <h2 class="page-title">この章のまとめ</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <ul class="text-list">
+          <li><code>/add-plugin pstack</code> のあと <code>/setup-pstack</code> まで進んだ</li>
+          <li>質問は出た順に答え、モデルの最適化では止まらなかった</li>
+          <li>紙の「検証」欄に、困る条件を一行書いた</li>
+          <li>テストの全文は、まだ書いていない</li>
+        </ul>
+        <div class="callout callout-point">
+          <div class="callout-point-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" focusable="false">
+              <path d="M18 42 V18.5c0-1.4 1-2.5 2.4-2.5h.2c1.3 0 2.4 1.1 2.4 2.5V28
+M23 28 V12.2c0-1.5 1.1-2.7 2.6-2.7s2.6 1.2 2.6 2.7V28
+M28.2 28 V14.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V28
+M33.2 28 V17.2c0-1.3 1-2.4 2.3-2.4 1.4 0 2.5 1.1 2.5 2.5V30.5
+c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 22.5c-2.2-1.8-3.8-1.5-5.2.4-1.2 1.6-.4 3.4 1.2 4.2L18 29"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="callout-body">
+            <p class="callout-kicker callout-point-kicker">ポイント</p>
+            <p>検証の一行が残ったら、次の章で三つの置き場を一本につなぎます。差分の中身は、そのあとで見ます。</p>
+          </div>
+        </div>
+        <p class="next-hint">次の章へ — 三種をつなぐ</p>
+        <div class="folio-num">36</div>
       </article>
     </section>
 

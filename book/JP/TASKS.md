@@ -9,15 +9,15 @@
 | ID | タスク | 状態 | メモ |
 | --- | --- | --- | --- |
 | T0 | 章題・書名確定 | ✅ | はじめに / Ch1 全体像 / Ch2 Grok Bot / Ch3 Cursor Projects / Ch4 pstack / Ch5 三種をつなぐ / おわりに |
-| T1 | 骨格 HTML（表紙〜おわりに） | 🚧 | 第3章まで本文入り。第4章以降は続く |
+| T1 | 骨格 HTML（表紙〜おわりに） | 🚧 | 第4章まで本文入り。第5章とおわりには続く |
 | T2 | はじめに | ✅ | `with-text.html` に掲載。Jev は既存メモ |
 | T3 | Chapter 1 全体像 | ✅ | 概要・やってみよう・キーワード早見・この章のまとめ。Jev は既存メモ |
 | T4 | Chapter 2 Grok Bot | ✅ | 概要・やってみよう・キーワード早見・この章のまとめ。画面はプレースホルダ。Jev は `drafts/jev-02-memo.md`（未実行） |
 | T5 | Chapter 3 Cursor Projects | ✅ | 概要・やってみよう・キーワード早見・この章のまとめ。画面はプレースホルダ。Jev は `drafts/jev-03-memo.md`（未実行） |
-| T6 | Chapter 4 pstack | 🔲 | |
+| T6 | Chapter 4 pstack | ✅ | 概要・やってみよう・キーワード早見・この章のまとめ。画面はプレースホルダ。Jev は `drafts/jev-04-memo.md`（未実行） |
 | T7 | Chapter 5 三種をつなぐ | 🔲 | |
 | T8 | おわりに・奥付 | 🔲 | |
-| T9 | Jev AIっぽさ判定・直し | 🚧 | 00・01 は通過版メモを残置。02・03 は CLI がなく未実行 |
+| T9 | Jev AIっぽさ判定・直し | 🚧 | 00・01 は通過版メモを残置。02〜04 は CLI がなく未実行 |
 | T10 | 社長確認 → 組版 | 🔲 | 組版 PDF と KDP はこの作業では作らない |
 
 ルール: kindle-template 本体は触らない。見本 examples/ は編集しない。
