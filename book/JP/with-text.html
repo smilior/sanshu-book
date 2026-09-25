@@ -3,30 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kindle 書籍 — 文字入りレイアウト見本</title>
+  <title>三種の神器 超入門</title>
   <link rel="stylesheet" href="templates.css" />
   <link rel="stylesheet" href="with-text.css" />
 </head>
 <body class="with-text">
   <header class="toolbar no-print">
     <div>
-      <strong>文字入りレイアウト見本</strong>
-      <span class="muted">空枠と同じ13枚 · 章立ての文言を流し込み</span>
+      <strong>三種の神器 超入門</strong>
+      <span class="muted">はじめにからおわりにまで本文入り</span>
     </div>
     <nav class="toc-nav">
-      <a href="index.html">空枠版へ</a>
       <a href="#cover">表紙</a>
       <a href="#toc">目次</a>
-      <a href="#body">本文</a>
-      <a href="#chapter">章扉</a>
       <a href="#preface">はじめに</a>
+      <a href="#ch1">第1章</a>
+      <a href="#ch2">第2章</a>
+      <a href="#ch3">第3章</a>
+      <a href="#ch4">第4章</a>
+      <a href="#ch5">第5章</a>
       <a href="#outro">おわりに</a>
-      <a href="#steps">手順</a>
-      <a href="#figure">図</a>
-      <a href="#callout">囲み</a>
-      <a href="#table">表</a>
-      <a href="#summary">まとめ</a>
-      <a href="#colophon">奥付</a>
     </nav>
     <div class="toolbar-actions">
       <button type="button" onclick="kindlePreviewReload()" title="HTML/CSSを再読み込み（表示位置は維持）">更新</button>
@@ -36,25 +32,23 @@
 
   <main class="stage">
 
-    <!-- 1 表紙 -->
     <section class="sheet-wrap" id="cover">
-      <p class="sheet-label no-print">1 · 表紙</p>
+      <p class="sheet-label no-print">表紙</p>
       <article class="page page-cover">
         <div class="cover-spacer-top"></div>
         <div class="cover-block">
-          <h1 class="cover-title">サンプル製品</h1>
+          <h1 class="cover-title">三種の神器 超入門</h1>
           <div class="mark-line mark-line-short"></div>
-          <p class="cover-subtitle">はじめての仕事場ガイド</p>
-          <p class="cover-tagline">頼むだけで、仕事の道具が手元に残る。</p>
+          <p class="cover-subtitle">Grok Bot・Cursor Projects・pstackで、方針と実装を分けてみよう</p>
+          <p class="cover-tagline">中川 将広</p>
         </div>
         <div class="cover-spacer-bottom"></div>
         <p class="cover-meta">2026</p>
       </article>
     </section>
 
-    <!-- 2 目次 -->
     <section class="sheet-wrap" id="toc">
-      <p class="sheet-label no-print">2 · 目次</p>
+      <p class="sheet-label no-print">目次</p>
       <article class="page page-toc">
         <div class="page-heading">
           <h2 class="page-title">目次</h2>
@@ -62,286 +56,977 @@
         </div>
         <ol class="toc-list-text">
           <li><span class="toc-label">はじめに</span><span class="toc-leader"></span><span class="toc-page">3</span></li>
-          <li><span class="toc-num">1</span><span class="toc-label">概要 — サンプル製品 とは何か</span><span class="toc-leader"></span><span class="toc-page">5</span></li>
-          <li><span class="toc-num">2</span><span class="toc-label">インストール — 起動からログインまで</span><span class="toc-leader"></span><span class="toc-page">11</span></li>
-          <li><span class="toc-num">3</span><span class="toc-label">機能の全体像 — 画面とキーワード</span><span class="toc-leader"></span><span class="toc-page">17</span></li>
-          <li><span class="toc-num">4</span><span class="toc-label">基本操作 — 頼む・形にする・確定する・渡す</span><span class="toc-leader"></span><span class="toc-page">23</span></li>
-          <li><span class="toc-num">5</span><span class="toc-label">事例1 — 週次報告をスライドで作る</span><span class="toc-leader"></span><span class="toc-page">31</span></li>
-          <li><span class="toc-num">6</span><span class="toc-label">事例2 — 自分専用の進捗ボードを作る</span><span class="toc-leader"></span><span class="toc-page">37</span></li>
-          <li><span class="toc-num">7</span><span class="toc-label">事例3 — スプレッドシートと安全につなぐ</span><span class="toc-leader"></span><span class="toc-page">43</span></li>
-          <li><span class="toc-num">8</span><span class="toc-label">事例4 — チームに配り、型として再利用する</span><span class="toc-leader"></span><span class="toc-page">49</span></li>
-          <li><span class="toc-label">おわりに</span><span class="toc-leader"></span><span class="toc-page">55</span></li>
+          <li><span class="toc-num">1</span><span class="toc-label">三種の神器の全体像</span><span class="toc-leader"></span><span class="toc-page">6</span></li>
+          <li><span class="toc-num">2</span><span class="toc-label">Grok Bot — 方針と Go/No-Go の司令塔</span><span class="toc-leader"></span><span class="toc-page">13</span></li>
+          <li><span class="toc-num">3</span><span class="toc-label">Cursor Projects — 長い案件の箱</span><span class="toc-leader"></span><span class="toc-page">22</span></li>
+          <li><span class="toc-num">4</span><span class="toc-label">pstack — 検証を先に置く</span><span class="toc-leader"></span><span class="toc-page">30</span></li>
+          <li><span class="toc-num">5</span><span class="toc-label">三種をつなぐ — 方針 → 実装 → 検証</span><span class="toc-leader"></span><span class="toc-page">37</span></li>
+          <li><span class="toc-label">おわりに</span><span class="toc-leader"></span><span class="toc-page">44</span></li>
         </ol>
-        <div class="folio-num">ii</div>
+        <div class="folio-num">2</div>
       </article>
     </section>
 
-    <!-- 3 本文 -->
-    <section class="sheet-wrap" id="body">
-      <p class="sheet-label no-print">3 · 本文</p>
-      <article class="page page-body">
-        <div class="running-head">
-          <span class="running-text">第1章 概要</span>
-        </div>
-        <div class="section-head section-head-text">
-          <span class="sec-num-text">1</span>
-          <h3 class="sec-title">これは何か</h3>
-          <div class="mark-tick"></div>
-        </div>
-        <div class="body-prose">
-          <p>サンプル製品 は、社内向けの AI 仕事場です。チャットに頼むと、答えだけでなく、スライドや小さな道具（小さな道具）がその場に残ります。</p>
-          <p>従来のチャット AI では、良い回答も会話の中に閉じてしまいがちです。翌日には別の窓を開き、同僚への共有はコピー＆ペーストになります。この本が扱うのは、その「残らない」問題をどう短くするかです。</p>
-        </div>
-        <div class="figure-block">
-          <div class="figure-box figure-box-label">
-            <span class="figure-placeholder">画面キャプチャ差し込み</span>
-          </div>
-          <p class="caption">図: エージェント / 小さな道具 / 接続の関所 の3つ</p>
-        </div>
-        <div class="folio-num">6</div>
-      </article>
-    </section>
-
-    <!-- 4 章扉 -->
-    <section class="sheet-wrap" id="chapter">
-      <p class="sheet-label no-print">4 · 章扉</p>
-      <article class="page page-chapter">
-        <div class="chapter-center chapter-center-text">
-          <p class="chapter-num-text">1</p>
-          <h2 class="chapter-title-text">概要</h2>
-          <p class="chapter-sub-text">サンプル製品 とは何か</p>
-        </div>
-      </article>
-    </section>
-
-    <!-- 5 はじめに -->
     <section class="sheet-wrap" id="preface">
-      <p class="sheet-label no-print">5 · はじめに</p>
+      <p class="sheet-label no-print">はじめに · 1</p>
       <article class="page page-preface">
         <div class="page-heading">
           <h2 class="page-title">はじめに</h2>
           <div class="mark-line mark-line-heading"></div>
         </div>
         <div class="body-prose">
-          <p>この本は、サンプル製品 を手元で動かしながら、「頼む → 形になる → 見て確定 → 渡す」を一度通すためのガイドです。</p>
-          <p>コードの深い解説はしません。画面を追い、同じ操作が再現できれば十分です。</p>
+          <p>会社員をしながら、空き時間に小さなアプリを作っています。飲食店向けの日次衛生チェックと写真証拠を残す「衛生ログ」もその一つでした。要件は大きくないのに、チャットがしんどくなった時期があります。</p>
+          <p>朝は「写真はいつ必須にするか」を決めるつもりだった。昼すぎにはテーブルのカラム名を直していて、夜にはボタンを右に寄せた差分を見ている。Go した記憶がない。No-Go した記憶もない。ある夜、スレッドを最初から読み直したら、写真必須の条件が言い方を変えて三回出てきた。どれが最終か分からない。ボタンの話のあいだに、「そもそもその画面を出すのか」と迷っている一文が挟まっている。進めているつもりで、決めていなかった。</p>
+          <p>AI に聞けば返ってくる。それは知っていた。返ってくる場所が一つだと、判断と実装の境目が溶ける。止まっているつもりはないのに進んでいる実感もない、という状態が続いた。ログは長い。決まったことは短い。</p>
+          <p>混線をほどきたくて、手元の道具を分けてみた。この本でいう三種の神器です。名前は大げさです。中身は地味です。</p>
+          <p>いま方針と Go / No-Go を置いているのは <strong>Grok Bot</strong> です。実装コードは書かせない。専門家や Cursor の Project に振る。衛生ログでは、写真必須の条件も日次の締め方も、ここで固めてから先に出しました。「作って」より前に、「やるか」「どこまでか」を残す。Go が出るまで実装側には触らない。夜に読み返すときの迷子が減ったのは、決まったことが短いメモで残るようになったからだと思います。</p>
         </div>
-        <ul class="text-list">
-          <li>想定読者 — 非エンジニア寄り。ターミナルに抵抗がなければOK</li>
-          <li>必要なもの — PC、Node.js、pnpm、AI プロバイダの API キー</li>
-          <li>読み方 — 急ぎなら第2章→第4章→事例1から</li>
-        </ul>
         <div class="folio-num">3</div>
       </article>
     </section>
 
-    <!-- 6 おわりに -->
-    <section class="sheet-wrap" id="outro">
-      <p class="sheet-label no-print">6 · おわりに</p>
-      <article class="page page-outro">
+    <section class="sheet-wrap" id="preface-2">
+      <p class="sheet-label no-print">はじめに · 2</p>
+      <article class="page page-preface">
         <div class="page-heading">
-          <h2 class="page-title">おわりに</h2>
+          <h2 class="page-title">はじめに</h2>
           <div class="mark-line mark-line-heading"></div>
         </div>
         <div class="body-prose">
-          <p>ここまでで、手元の サンプル製品 に「残る道具」を一度作れているはずです。</p>
+          <p>実装は <strong>Cursor Projects</strong> に渡すようにしました。長い案件の箱、という感覚です。リポ単位で抱えられて、並列にもできる。方針が固まったあとで任せる。司令塔のスレッドにコードを書き始めない。混線していたころは、方針メモのすぐ下に差分が並んでいて、決定と試行錯誤の区別がつかなかった。箱が分かれるだけで、朝の判断が夕方まで残ることが増えました。衛生ログ本体と別件の小さな改善を同じ頭で抱えないためにも助かっています。一つの箱に全部を詰め込むとまた混線する、というのは何度かやってから覚えました。</p>
+          <p>検証の置き方には <strong>pstack</strong> を入れています。Cursor のプラグインで、入れ方は <code>/add-plugin pstack</code> のあと <code>/setup-pstack</code>。細かい設定は本編に回します。僕が掴んでいるのは、「動いてから困るより、困る条件を先に書いておく」ための道具、くらいです。衛生ログでも、写真アップロードの失敗を後から直すより、先に検証の置き場を決めておいた方が手戻りが少なかった。完璧なテスト設計の話ではない。困る場所を先にメモする、という感覚に近いです。</p>
+          <p>三種をきれいに並べると製品紹介になります。言いたいのは優劣ではない。同じチャットに全部を載せない、ということだけです。方針は Grok Bot。実装は Cursor Projects。検証の置き方は pstack。混ぜない。電子書籍の作業とアプリの案件を同じ司令塔で見ている今も、Go 前に実装を始めない一点は変えていません。新規案件を増やしたくなる日はある。増やす前に Go を取る、と決めておくと夜の自分が楽です。</p>
         </div>
-        <ul class="text-list">
-          <li>次の一歩 — 週次スライドを自分の型にする</li>
-          <li>次の一歩 — チーム用 Blueprint を1本配る</li>
-          <li>次の一歩 — 接続は 接続の関所 経由だけにそろえる</li>
-        </ul>
-        <div class="outro-space"></div>
-        <div class="folio-num">55</div>
+        <div class="folio-num">4</div>
       </article>
     </section>
 
-    <!-- 7 手順 -->
-    <section class="sheet-wrap" id="steps">
-      <p class="sheet-label no-print">7 · 手順</p>
-      <article class="page page-steps">
+    <section class="sheet-wrap" id="preface-3">
+      <p class="sheet-label no-print">はじめに · 3</p>
+      <article class="page page-preface">
+        <div class="page-heading">
+          <h2 class="page-title">はじめに</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <div class="body-prose">
+          <p>マニュアルの要約ではありません。混線していた場所から、手元で分け直した記録に近いです。Chapter では全体像、それぞれの使い方、最後に一本につなぐ流れまで進みます。画面が要る節は画面を載せます。紙に三欄を書くだけ、という節もあります。</p>
+          <p>頭にある読者は、Grok Bot と Cursor を使い始めていて、長い案件を一人で抱え、方針と実装が同じ場所に溜まって疲れている人です。インストール手順の本でも、公式ヘルプの言い換えでもありません。</p>
+          <p>「決める場所」と「作る場所」を分けたい人に、三種の置き方が届けばいい。全体像から見ていきます。</p>
+        </div>
+        <p class="preface-footnote">2026年9月に書いています。画面の文言やメニューの場所は、読んだころには動いているかもしれません。見た目は変わる前提で読んでください。</p>
+        <div class="folio-num">5</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch1">
+      <p class="sheet-label no-print">第1章 · 章扉</p>
+      <article class="page page-chapter">
+        <div class="chapter-center chapter-center-text">
+          <p class="chapter-num-text">1</p>
+          <h2 class="chapter-title-text">三種の神器の全体像</h2>
+          <p class="chapter-sub-text">方針・実装・検証を、同じチャットに載せない</p>
+        </div>
+        <div class="folio-num">6</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch1-body-1">
+      <p class="sheet-label no-print">第1章 · 1.1 概要</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第1章 三種の神器の全体像</span>
+        </div>
         <div class="section-head section-head-text">
-          <span class="sec-num-text">2</span>
-          <h3 class="sec-title">起動する</h3>
+          <span class="sec-num-text">1.1</span>
+          <h3 class="sec-title">概要</h3>
           <div class="mark-tick"></div>
         </div>
-        <ol class="steps-list-text">
-          <li class="step-item">
-            <div class="step-row">
-              <span class="step-num">1.</span>
-              <div class="step-copy">
-                <p class="step-title">ターミナルでプロジェクトを開く</p>
-                <p class="step-note">クローンしたフォルダに移動します。</p>
-              </div>
-            </div>
-            <div class="figure-block step-figure">
-              <div class="figure-box figure-box-label figure-box-step">
-                <span class="figure-placeholder">ターミナルでフォルダを開いた画面</span>
-              </div>
-              <p class="caption">図: プロジェクトの場所</p>
-            </div>
-          </li>
-          <li class="step-item">
-            <div class="step-row">
-              <span class="step-num">2.</span>
-              <div class="step-copy">
-                <p class="step-title">起動コマンドを実行する</p>
-                <p class="step-note"><code>pnpm run-local</code> をそのまま貼って実行。</p>
-              </div>
-            </div>
-            <div class="figure-block step-figure">
-              <div class="figure-box figure-box-label figure-box-step">
-                <span class="figure-placeholder">起動コマンドの実行結果</span>
-              </div>
-              <p class="caption">図: 起動中のターミナル</p>
-            </div>
-          </li>
-          <li class="step-item">
-            <div class="step-row">
-              <span class="step-num">3.</span>
-              <div class="step-copy">
-                <p class="step-title">ブラウザで開き、アカウントを作る</p>
-                <p class="step-note"><code>http://localhost:3000/</code> にアクセス。初回は待ちが長いことがあります。</p>
-              </div>
-            </div>
-            <div class="figure-block step-figure">
-              <div class="figure-box figure-box-label figure-box-step">
-                <span class="figure-placeholder">初回ログイン画面</span>
-              </div>
-              <p class="caption">図: ログイン</p>
-            </div>
-          </li>
-        </ol>
-        <div class="folio-num">12</div>
-      </article>
-    </section>
-
-    <!-- 8 図＋キャプション -->
-    <section class="sheet-wrap" id="figure">
-      <p class="sheet-label no-print">8 · 図＋キャプション</p>
-      <article class="page page-figure">
-        <div class="figure-stack">
-          <div class="figure-block">
-            <div class="figure-box figure-box-label figure-box-wide">
-              <span class="figure-placeholder">ワークスペース一覧の画面</span>
-            </div>
-            <p class="caption">図: ホーム — ワークスペースが一覧される</p>
-          </div>
-          <div class="figure-block">
-            <div class="figure-box figure-box-label figure-box-mid">
-              <span class="figure-placeholder">チャットと 小さな道具 の並び</span>
-            </div>
-            <p class="caption">図: 頼んだ結果が右に形になる</p>
-          </div>
-        </div>
-        <div class="folio-num">19</div>
-      </article>
-    </section>
-
-    <!-- 9 囲み -->
-    <section class="sheet-wrap" id="callout">
-      <p class="sheet-label no-print">9 · 囲み</p>
-      <article class="page page-callout">
         <div class="body-prose">
-          <p>操作の途中で押さえておきたい注意は、本文の流れを止めないよう囲みにまとめています。</p>
+          <p>はじめにで書いた混線を、もう少し手前から見ます。衛生ログを進めていたころ、僕は一つのチャットに全部を載せていました。写真をいつ必須にするか。テーブルはどう切るか。ボタンは右か左か。同じスレッドに並ぶ。朝に決めたつもりが、昼にはカラム名の話に吸い込まれて、夜には「そもそもその画面を出すのか」に戻っている。ログは長い。決まったことは残らない。</p>
+          <p>足りなかったのは道具の数ではなかった、と今は思います。どこで方針を固めて、どこで実装し、どこで困る条件を先に書いておくか。置き場がなかった。三種の神器と呼んでいるものは、その分け方です。名前は大げさです。やっていることは地味です。</p>
+          <p>方針と Go / No-Go は <strong>Grok Bot</strong> に置いています。実装コードは書かせない。専門家や Cursor の Project に振る。衛生ログでは、写真必須の条件も日次の締め方も、ここで固めてから先に出しました。「作って」より前に、「やるか」「どこまでか」を短いメモで残す。Go が出るまで実装側には触らない。夜に読み返して迷子になる回数が減ったのは、決まったことが短く残るようになったからだと思います。</p>
         </div>
-        <div class="callout callout-text">
-          <div class="callout-icon callout-icon-a" aria-hidden="true"></div>
-          <div class="callout-body">
-            <p class="callout-kicker">ポイント</p>
-            <p>Draft を一度見てから Accept する。提案をそのまま確定しなくてよい。</p>
-          </div>
-        </div>
-        <div class="callout callout-text">
-          <div class="callout-icon callout-icon-b" aria-hidden="true"></div>
-          <div class="callout-body">
-            <p class="callout-kicker">注意</p>
-            <p>API キーは画面共有やキャプチャに写さない。公開前に失効させる。</p>
-          </div>
-        </div>
-        <div class="callout callout-text">
-          <div class="callout-icon callout-icon-c" aria-hidden="true"></div>
-          <div class="callout-body">
-            <p class="callout-kicker">用語</p>
-            <p>小さな道具 = 自分専用の小さな道具。Blueprint = 型紙（データなしのコピー元）。</p>
-          </div>
-        </div>
-        <div class="folio-num">25</div>
+        <div class="folio-num">7</div>
       </article>
     </section>
 
-    <!-- 10 表 -->
-    <section class="sheet-wrap" id="table">
-      <p class="sheet-label no-print">10 · 表</p>
+    <section class="sheet-wrap" id="ch1-body-1b">
+      <p class="sheet-label no-print">第1章 · 1.1 概要の続き</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第1章 三種の神器の全体像</span>
+        </div>
+        <div class="body-prose">
+          <p>実装を渡す箱は <strong>Cursor Projects</strong> です。長い案件をリポ単位で抱えられて、並列にもできる。方針が固まったあとで任せる。司令塔のスレッドに差分を書き始めない。混線していたころは、方針メモのすぐ下に試行錯誤が並んでいて、決定と実験の区別がつかなかった。箱が分かれるだけで、朝の判断が夕方まで残ることが増えました。衛生ログ本体と別件の小さな改善を同じ頭で抱えないためにも助かっています。一つの箱に全部を詰め込むとまた混線する。何度かやってから覚えました。</p>
+          <p>検証の置き場には <strong>pstack</strong> を入れています。Cursor のプラグインで、入れ方は <code>/add-plugin pstack</code> のあと <code>/setup-pstack</code>。細かい設定は Chapter 4 に回します。掴んでいるのは、「動いてから困るより、困る条件を先に書いておく」ための道具、くらいです。衛生ログでも、写真アップロードの失敗を後から直すより、先に検証の置き場を決めておいた方が手戻りが少なかった。完璧なテスト設計ではない。困る場所を先にメモする、という感覚です。</p>
+          <p>きれいに並べると製品紹介になります。言いたいのは優劣ではない。同じチャットに全部を載せない、ということだけです。方針・実装・検証を混ぜると、また朝の決定が夜の差分に埋もれます。電子書籍の作業とアプリの案件を同じ司令塔で見ている今も、Go 前に実装を始めない一点は変えていません。</p>
+        </div>
+        <div class="folio-num">8</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch1-body-2">
+      <p class="sheet-label no-print">第1章 · 1.2 やってみよう</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第1章 三種の神器の全体像</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">1.2</span>
+          <h3 class="sec-title">やってみよう</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>画面は開きません。紙でもメモアプリでも、手元にあるもので十分です。いま抱えている案件を一つだけ選んでください。大きいものでなくていい。衛生ログでいうと、「写真必須の条件を固める」くらいの粒度で足ります。</p>
+          <p>紙を三つの欄に分けます。左から「方針」「実装」「検証」。線は雑で構いません。</p>
+          <p>まず「方針」の欄に、いま決めたいことだけを書きます。やるかやらないか。どこまでやるか。やらない範囲。衛生ログなら、「閉店後のチェックでは写真必須」「開店前は任意」といった一文です。コードの話は書かない。カラム名も書かない。ボタンの位置も書かない。決めることだけです。書けないなら、まだ方針が固まっていない、という事実が残ります。それも十分です。</p>
+          <p>次に「実装」の欄へ。方針が固まったあとで触る箱を書きます。リポ名でも、Cursor の Project 名でも、「衛生ログ本体の箱」でもいい。いまは名前がなくて構いません。大事なのは、方針の欄に書いたことを実装の欄に移さないこと。混ぜない練習です。</p>
+        </div>
+        <div class="folio-num">9</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch1-body-2b">
+      <p class="sheet-label no-print">第1章 · 1.2 やってみようの続き</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第1章 三種の神器の全体像</span>
+        </div>
+        <div class="body-prose">
+          <p>最後に「検証」。動いてから困りそうな条件を一行で書きます。衛生ログなら、「写真がアップロードできなかったとき、ログは残すか残さないか」。答えはまだ要りません。困る場所を先に書いておく、という感覚です。pstack の設定はこの段階では触りません。置き場の名前だけです。</p>
+          <p>三欄が埋まったら、一度読み返します。方針の欄に実装の話が混ざっていないか。実装の欄に Go / No-Go が混ざっていないか。検証の欄が「あとで考える」になっていないか。混ざっていたら、線を引き直して移します。完璧である必要はありません。混ぜない、という一点だけ確認します。</p>
+          <p>この三欄は、このあとの章でも戻ってきます。Grok Bot に渡すのは方針の欄。Cursor Projects に渡すのは実装の欄。pstack で先に書くのは検証の欄。画面の手順はこれから一つずつ見ます。いまは、手元で分けた、という状態があれば十分です。</p>
+        </div>
+        <div class="folio-num">10</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch1-terms">
+      <p class="sheet-label no-print">第1章 · キーワード早見</p>
       <article class="page page-table">
+        <div class="running-head">
+          <span class="running-text">第1章 三種の神器の全体像</span>
+        </div>
         <div class="page-heading">
           <h2 class="page-title">キーワード早見</h2>
           <div class="mark-line mark-line-heading"></div>
         </div>
+        <p class="caption">あとから見返す用です。厳密な定義ではなく、この本でのたとえです。</p>
         <table class="text-table">
           <thead>
             <tr>
               <th>ことば</th>
-              <th>たとえ</th>
+              <th>この本でのたとえ</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>エージェント</td>
-              <td>チャットで仕事を頼む相手</td>
+              <td>三種の神器</td>
+              <td>方針・実装・検証の置き場を三つに分けた呼び方</td>
             </tr>
             <tr>
-              <td>小さな道具</td>
-              <td>自分専用の小さな道具</td>
+              <td>Grok Bot</td>
+              <td>方針と Go / No-Go を残す司令塔</td>
             </tr>
             <tr>
-              <td>Blueprint</td>
-              <td>型紙（配ると相手が自分用コピーを作れる）</td>
+              <td>Cursor Projects</td>
+              <td>方針が固まったあと、実装を渡す箱</td>
             </tr>
             <tr>
-              <td>接続の関所</td>
-              <td>外のサービスへの門番</td>
+              <td>pstack</td>
+              <td>困る条件を先に書いておくためのプラグイン</td>
             </tr>
             <tr>
-              <td>Draft → Accept</td>
-              <td>提案を見てから確定する</td>
+              <td>Go / No-Go</td>
+              <td>やるか、やらないか。実装を開く前の合図</td>
+            </tr>
+            <tr>
+              <td>衛生ログ</td>
+              <td>飲食店の日次チェックと写真を残す、僕の小さなアプリ</td>
             </tr>
           </tbody>
         </table>
-        <div class="folio-num">18</div>
+        <div class="folio-num">11</div>
       </article>
     </section>
 
-    <!-- 11 章末まとめ -->
-    <section class="sheet-wrap" id="summary">
-      <p class="sheet-label no-print">11 · 章末まとめ</p>
+    <section class="sheet-wrap" id="ch1-summary">
+      <p class="sheet-label no-print">第1章 · まとめ</p>
       <article class="page page-summary">
         <div class="page-heading">
           <h2 class="page-title">この章のまとめ</h2>
           <div class="mark-line mark-line-heading"></div>
         </div>
         <ul class="text-list">
-          <li>週次報告の材料をチャットに頼めた</li>
-          <li>スライド形式の成果物が立ち上がった</li>
-          <li>Draft を確認してから Accept できた</li>
+          <li>一つのチャットに、方針と実装と検証を載せない</li>
+          <li>方針は Grok Bot、実装の箱は Cursor Projects、検証の置き場は pstack</li>
+          <li>手元の案件を「方針」「実装」「検証」の三欄に書き分けた</li>
+          <li>Go が出るまで、実装側の箱は開かない</li>
         </ul>
-        <div class="summary-space"></div>
-        <p class="next-hint">次の章へ — 事例2 自分専用の進捗ボード</p>
+        <div class="callout callout-point">
+          <div class="callout-point-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" focusable="false">
+              <path d="M18 42 V18.5c0-1.4 1-2.5 2.4-2.5h.2c1.3 0 2.4 1.1 2.4 2.5V28
+M23 28 V12.2c0-1.5 1.1-2.7 2.6-2.7s2.6 1.2 2.6 2.7V28
+M28.2 28 V14.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V28
+M33.2 28 V17.2c0-1.3 1-2.4 2.3-2.4 1.4 0 2.5 1.1 2.5 2.5V30.5
+c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 22.5c-2.2-1.8-3.8-1.5-5.2.4-1.2 1.6-.4 3.4 1.2 4.2L18 29"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="callout-body">
+            <p class="callout-kicker callout-point-kicker">ポイント</p>
+            <p>紙の「方針」欄が一行でも残っていれば、次はそこを Grok Bot に持っていきます。コードの話は、まだ書きません。</p>
+          </div>
+        </div>
+        <p class="next-hint">次の章へ — Grok Bot</p>
+        <div class="folio-num">12</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2">
+      <p class="sheet-label no-print">第2章 · 章扉</p>
+      <article class="page page-chapter">
+        <div class="chapter-center chapter-center-text">
+          <p class="chapter-num-text">2</p>
+          <h2 class="chapter-title-text">Grok Bot</h2>
+          <p class="chapter-sub-text">方針と Go/No-Go の司令塔</p>
+        </div>
+        <div class="folio-num">13</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-body-1">
+      <p class="sheet-label no-print">第2章 · 2.1 概要</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">2.1</span>
+          <h3 class="sec-title">概要</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>Chapter 1 の三欄でいうと、ここは「方針」の欄の話です。衛生ログを進めていたころ、僕が一番つまずいたのは実装そのものではなかった。写真はいつ必須にするか。閉店後だけか、開店前もか。日次の締めは誰が押すか。答えは頭のどこかにあるのに、チャットへ投げるとすぐカラム名やボタンの話に流れます。決まった気がする。翌朝読むと「作って」だけが残っている。</p>
+          <p>そこに置いているのが Grok Bot です。方針と Go / No-Go。司令塔、と呼んでいます。実装コードは書かせない。専門家や Cursor の Project に振る。衛生ログでは、写真必須の条件も締め方も、ここで一文にしてから先に出しました。「やるか」「どこまでか」「やらない範囲」が短いメモで残るまで、実装側には触らない。夜に読み返して迷子になる回数が減ったのは、決まったことが短く残るようになったからだと思います。</p>
+        </div>
+        <div class="folio-num">14</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-body-1b">
+      <p class="sheet-label no-print">第2章 · 2.1 概要の続き</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="body-prose">
+          <p>何でも答えてくれる場所、という意味ではありません。答えてくれる場所が一つだと、判断と実装の境目が溶ける。僕がやっているのは逆です。ここには方針だけを載せる。コードの断片は貼らないし、テーブル設計の相談もボタンの位置も、このスレッドではやらない。固まったら実装は Project に渡す。振る先は案件によって違って、衛生ログ本体なら Cursor の箱、別の専門家がいるならそちらです。司令塔のログに差分が混ざらないことだけが、僕にとっては大事でした。</p>
+          <p>電子書籍の作業とアプリの案件を同じ司令塔で見ている今も、Go の前に実装を始めない一点は変えていません。新規案件を増やしたくなる日はある。増やす前に Go を取る、と決めておくと夜の自分が楽です。機能一覧を並べるつもりはありません。掴んでいる使い方だけを書きます。</p>
+        </div>
+        <div class="folio-num">15</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-body-2">
+      <p class="sheet-label no-print">第2章 · 2.2 やってみよう</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">2.2</span>
+          <h3 class="sec-title">やってみよう</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>画面を開きます。案件は小さくて構いません。衛生ログなら、「閉店後のチェックで写真を必須にするか」くらいで足ります。Chapter 1 で紙に書いた「方針」の欄がある人は、それを持ってきてください。ない人は、いま決めたいことを一文でメモしておきます。コードの話は書かない。決めることだけです。</p>
+          <p>Grok Bot のチャットを開きます。新しいスレッドでも、既存の司令塔用でも構いません。僕は案件ごとに方針用の場所を分けていますが、最初は一つで大丈夫です。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。Grok Bot の新規チャット、または司令塔用スレッドを開いた画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: 方針用のスレッドを開く。実装用のチャットと混ぜない。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">16</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-body-2b">
+      <p class="sheet-label no-print">第2章 · 2.2 依頼</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="body-prose">
+          <p>依頼文は短くします。僕がよく送るのは、だいたい次のような文面です。</p>
+          <p>「衛生ログで、閉店後の日次チェックに写真必須を入れるか決めたい。実装コードは書かないで。やる／やらない、やるならどこまで、やらない範囲、を短く整理して。最後に Go か No-Go を出して。」</p>
+          <p>「書かないで」を明示し、決める軸を狭くし、Go / No-Go を求める。長く説明しすぎない方が、返事も短くなります。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。方針の依頼を入力した、送信直前の画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: 「実装コードは書かないで」と「Go / No-Go」を一文に入れて送る。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">17</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-body-2c">
+      <p class="sheet-label no-print">第2章 · 2.2 返事</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="body-prose">
+          <p>返事が返ってきたら、長さを見る。カラム名や API の話が混ざっていたら、依頼がまだ混線しています。僕は「方針だけ。実装は触れないで」と返して、短いメモに戻してもらいます。「閉店後は必須／開店前は任意／今回は通知はやらない」くらいになれば十分です。仕様書はいりません。</p>
+          <p>Go なら、そのメモを実装側に渡す材料にします。渡す先は次の章の Cursor Projects で、ここではまだ箱を開きません。No-Go なら、やらない理由を一行残して終わります。どちらでもいい。決まった、という状態が残れば成功です。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。Go または No-Go と、短い方針メモが返ってきたチャット。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: 決まったことが短く残っているかだけ見る。コードが混ざっていたら依頼をやり直す。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">18</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-body-2d">
+      <p class="sheet-label no-print">第2章 · 2.2 メモ</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="body-prose">
+          <p>自分のメモへ一言写しておきます。紙の「方針」欄でもメモアプリでもいい。「Go。閉店後は写真必須。開店前は任意。通知は今回やらない」。日付がなくても、案件名があれば後から追えます。司令塔のスレッドは消さない。あとで「あれ、必須にしたんだっけ」と迷ったときに戻れる場所が一つある。それがこの章のゴールです。</p>
+          <p>実装の画面はまだ開きません。Go の前に差分を見始めると、また朝の決定が夜の試行錯誤に埋もれます。箱を開くのは次の章です。いまは、方針と Go / No-Go が短い形で残っていれば十分です。</p>
+        </div>
+        <div class="folio-num">19</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-terms">
+      <p class="sheet-label no-print">第2章 · キーワード早見</p>
+      <article class="page page-table">
+        <div class="running-head">
+          <span class="running-text">第2章 Grok Bot</span>
+        </div>
+        <div class="page-heading">
+          <h2 class="page-title">キーワード早見</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <p class="caption">あとから見返す用です。厳密な定義ではなく、この本でのたとえです。</p>
+        <table class="text-table">
+          <thead>
+            <tr>
+              <th>ことば</th>
+              <th>この本でのたとえ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>司令塔</td>
+              <td>方針だけを置くスレッド。差分は混ぜない</td>
+            </tr>
+            <tr>
+              <td>書かないで</td>
+              <td>実装コードを返させない、依頼の一言</td>
+            </tr>
+            <tr>
+              <td>Go</td>
+              <td>やる。短いメモが残ってから箱を開く</td>
+            </tr>
+            <tr>
+              <td>No-Go</td>
+              <td>やらない。理由を一行残して終わる</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="folio-num">20</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch2-summary">
+      <p class="sheet-label no-print">第2章 · まとめ</p>
+      <article class="page page-summary">
+        <div class="page-heading">
+          <h2 class="page-title">この章のまとめ</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <ul class="text-list">
+          <li>方針の依頼に「実装コードは書かないで」と「Go / No-Go」を入れた</li>
+          <li>返事が、やる範囲とやらない範囲の短いメモになっている</li>
+          <li>コードが混ざっていたら、方針だけに戻してもらった</li>
+          <li>実装の箱は、まだ開いていない</li>
+        </ul>
+        <div class="callout callout-point">
+          <div class="callout-point-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" focusable="false">
+              <path d="M18 42 V18.5c0-1.4 1-2.5 2.4-2.5h.2c1.3 0 2.4 1.1 2.4 2.5V28
+M23 28 V12.2c0-1.5 1.1-2.7 2.6-2.7s2.6 1.2 2.6 2.7V28
+M28.2 28 V14.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V28
+M33.2 28 V17.2c0-1.3 1-2.4 2.3-2.4 1.4 0 2.5 1.1 2.5 2.5V30.5
+c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 22.5c-2.2-1.8-3.8-1.5-5.2.4-1.2 1.6-.4 3.4 1.2 4.2L18 29"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="callout-body">
+            <p class="callout-kicker callout-point-kicker">ポイント</p>
+            <p>Go のメモが一行残っていれば、次は Cursor Projects の箱にそれを渡します。司令塔のスレッドでは、まだコードを書き始めません。</p>
+          </div>
+        </div>
+        <p class="next-hint">次の章へ — Cursor Projects</p>
+        <div class="folio-num">21</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch3">
+      <p class="sheet-label no-print">第3章 · 章扉</p>
+      <article class="page page-chapter">
+        <div class="chapter-center chapter-center-text">
+          <p class="chapter-num-text">3</p>
+          <h2 class="chapter-title-text">Cursor Projects</h2>
+          <p class="chapter-sub-text">長い案件の箱</p>
+        </div>
+        <div class="folio-num">22</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch3-body-1">
+      <p class="sheet-label no-print">第3章 · 3.1 概要</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第3章 Cursor Projects</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">3.1</span>
+          <h3 class="sec-title">概要</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>Chapter 2 で Go のメモが残ったあと、僕が開くのは Cursor Projects です。長い案件の箱、という感覚です。衛生ログ本体は一つの箱にしています。電子書籍の作業は、別の箱です。同じ頭で抱えないために分けています。</p>
+          <p>リポ単位で抱えられて、並列にもできる、というのがいまの使い方です。方針が固まったあとで任せる。司令塔のスレッドに差分を書き始めない。混線していたころは、方針メモのすぐ下に試行錯誤が並んでいました。箱が分かれると、朝の Go が夕方の差分に埋もれにくくなります。衛生ログの写真必須と、別件のボタン位置を、同じ箱で直していた夜が一番読めませんでした。</p>
+        </div>
+        <div class="folio-num">23</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch3-body-1b">
+      <p class="sheet-label no-print">第3章 · 3.1 概要の続き</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第3章 Cursor Projects</span>
+        </div>
+        <div class="body-prose">
+          <p>何でも入る作業机、という意味ではありません。箱を開く条件は、Go のメモがあることだけです。No-Go の案件に箱は作りません。作ったとしても、中でコードは始めません。一つの箱に全部を詰め込むとまた混線する。衛生ログ本体と、別件の小さな改善を同じ Project に入れたときに、もう一度覚えました。</p>
+        </div>
+        <div class="folio-num">24</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch3-body-2">
+      <p class="sheet-label no-print">第3章 · 3.2 やってみよう</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第3章 Cursor Projects</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">3.2</span>
+          <h3 class="sec-title">やってみよう</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>画面を開きます。Go のメモを手元に置いてください。「Go。閉店後は写真必須。開店前は任意。通知は今回やらない」。この一行がない人は、Chapter 2 に戻って残してから来てください。箱を先に作らない、という確認です。</p>
+          <p>Cursor で、その案件の Project を開きます。衛生ログなら、既存リポの箱です。練習なら、空の練習用リポでも構いません。名前は「衛生ログ」のように、あとから案件が分かれば足ります。電子書籍の箱とは混ぜません。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。案件の Project を開いた画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: 実装を渡す箱を一つ開く。方針用のスレッドとは別。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">25</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch3-body-2b">
+      <p class="sheet-label no-print">第3章 · 3.2 メモを渡す</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第3章 Cursor Projects</span>
+        </div>
+        <div class="body-prose">
+          <p>箱のチャットに、Go のメモを渡します。僕が添える一文は短いです。「この方針だけ実装して。範囲外はやらない。通知は今回入れない。」方針のやり直しは司令塔に戻します。この箱では、差分の話だけです。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。Go のメモを渡した、送信直前の画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: 司令塔で残した一行を、箱に渡す。範囲外はやらない、と添える。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">26</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch3-body-2c">
+      <p class="sheet-label no-print">第3章 · 3.2 範囲</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第3章 Cursor Projects</span>
+        </div>
+        <div class="body-prose">
+          <p>動き出したら、見るのは範囲です。写真必須の条件と違うファイルを触り始めたら止めて、メモを再掲します。終わったら、紙の「実装」欄に箱の名前を書きます。司令塔のスレッドは開いたまま残します。決定のログはあちら、差分のログはこちら、です。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。渡した範囲で実装が進んでいる Project の画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: 差分が方針の範囲に収まっているかだけ見る。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">27</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch3-terms">
+      <p class="sheet-label no-print">第3章 · キーワード早見</p>
+      <article class="page page-table">
+        <div class="running-head">
+          <span class="running-text">第3章 Cursor Projects</span>
+        </div>
+        <div class="page-heading">
+          <h2 class="page-title">キーワード早見</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <p class="caption">あとから見返す用です。厳密な定義ではなく、この本でのたとえです。</p>
+        <table class="text-table">
+          <thead>
+            <tr>
+              <th>ことば</th>
+              <th>この本でのたとえ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Project</td>
+              <td>リポ単位で実装を渡す箱</td>
+            </tr>
+            <tr>
+              <td>範囲外</td>
+              <td>Go のメモに書いていない作業</td>
+            </tr>
+            <tr>
+              <td>並列</td>
+              <td>別の案件は、別の箱で同時に進めてよい</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="folio-num">28</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch3-summary">
+      <p class="sheet-label no-print">第3章 · まとめ</p>
+      <article class="page page-summary">
+        <div class="page-heading">
+          <h2 class="page-title">この章のまとめ</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <ul class="text-list">
+          <li>Go のメモがある案件だけ、Project の箱を開いた</li>
+          <li>衛生ログと別件は、箱を分けた</li>
+          <li>箱には方針の一行と、「範囲外はやらない」だけを渡した</li>
+          <li>決定のログは司令塔に残し、差分は箱に残した</li>
+        </ul>
+        <div class="callout callout-point">
+          <div class="callout-point-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" focusable="false">
+              <path d="M18 42 V18.5c0-1.4 1-2.5 2.4-2.5h.2c1.3 0 2.4 1.1 2.4 2.5V28
+M23 28 V12.2c0-1.5 1.1-2.7 2.6-2.7s2.6 1.2 2.6 2.7V28
+M28.2 28 V14.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V28
+M33.2 28 V17.2c0-1.3 1-2.4 2.3-2.4 1.4 0 2.5 1.1 2.5 2.5V30.5
+c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 22.5c-2.2-1.8-3.8-1.5-5.2.4-1.2 1.6-.4 3.4 1.2 4.2L18 29"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="callout-body">
+            <p class="callout-kicker callout-point-kicker">ポイント</p>
+            <p>箱の名前が紙の「実装」欄に書けたら、次は差分を見る前に、困る条件を一行残します。</p>
+          </div>
+        </div>
+        <p class="next-hint">次の章へ — pstack</p>
+        <div class="folio-num">29</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4">
+      <p class="sheet-label no-print">第4章 · 章扉</p>
+      <article class="page page-chapter">
+        <div class="chapter-center chapter-center-text">
+          <p class="chapter-num-text">4</p>
+          <h2 class="chapter-title-text">pstack</h2>
+          <p class="chapter-sub-text">検証を先に置く</p>
+        </div>
+        <div class="folio-num">30</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4-body-1">
+      <p class="sheet-label no-print">第4章 · 4.1 概要</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第4章 pstack</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">4.1</span>
+          <h3 class="sec-title">概要</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>三欄の残りの一つが、ここです。僕が pstack と呼んでいるのは、Cursor のプラグインです。入れ方は <code>/add-plugin pstack</code> のあと <code>/setup-pstack</code>。完璧なテスト設計の話ではありません。動いてから困るより、困る条件を先に書いておくための道具、という掴み方をしています。</p>
+          <p>衛生ログでは、写真のアップロードに失敗したあとで直すより、「失敗したとき、その回のログは残すか」を先に一行書いておいた方が手戻りが少なかった。Chapter 3 の箱で差分を見始める前に、その一行の置き場を決めます。モデルを誰に振るか、といった細かい答えはセットアップの質問に任せます。この章で残したいのは、コマンドが通ったことと、困る場所の名前です。</p>
+        </div>
+        <div class="folio-num">31</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4-body-2">
+      <p class="sheet-label no-print">第4章 · 4.2 やってみよう</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第4章 pstack</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">4.2</span>
+          <h3 class="sec-title">やってみよう</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>Cursor のチャットを開きます。実装の箱でも、いつものチャットでも、プラグインを入れられる場所で構いません。<code>/add-plugin pstack</code> を送ります。入った表示が出るまで待ちます。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。/add-plugin pstack を送ったあとの画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: プラグインを入れる。入った表示が出るまで待つ。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">32</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4-body-2b">
+      <p class="sheet-label no-print">第4章 · 4.2 セットアップ</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第4章 pstack</span>
+        </div>
+        <div class="body-prose">
+          <p>続いて <code>/setup-pstack</code> を送ります。質問が来たら、画面に出た順に答えます。モデルの名前で迷ったら、いま自分が普段使っているもので足ります。予算や役割の話で止まりそうなら、この本のゴールはそこではありません。セットアップが最後まで進むことだけ確認して、先に進みます。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。/setup-pstack の質問、または完了の画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: セットアップの質問は、出た順に答える。最適化は後回しでよい。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">33</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4-body-2c">
+      <p class="sheet-label no-print">第4章 · 4.2 一行</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第4章 pstack</span>
+        </div>
+        <div class="body-prose">
+          <p>進んだら、紙の「検証」欄の一行を書きます。衛生ログなら「写真がアップロードできなかったとき、その回のチェックは残す」。テストの全文は書きません。差分を開く前に、困る場所の名前が残っていれば、この章は終わりです。</p>
+        </div>
+        <div class="folio-num">34</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4-terms">
+      <p class="sheet-label no-print">第4章 · キーワード早見</p>
+      <article class="page page-table">
+        <div class="running-head">
+          <span class="running-text">第4章 pstack</span>
+        </div>
+        <div class="page-heading">
+          <h2 class="page-title">キーワード早見</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <p class="caption">あとから見返す用です。厳密な定義ではなく、この本でのたとえです。</p>
+        <table class="text-table">
+          <thead>
+            <tr>
+              <th>ことば</th>
+              <th>この本でのたとえ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>pstack</td>
+              <td>困る条件を、実装より先に書いておくプラグイン</td>
+            </tr>
+            <tr>
+              <td>/add-plugin pstack</td>
+              <td>プラグインを入れるときのコマンド</td>
+            </tr>
+            <tr>
+              <td>/setup-pstack</td>
+              <td>入れたあとに、質問へ答えて整えるコマンド</td>
+            </tr>
+            <tr>
+              <td>困る条件</td>
+              <td>動いてから直したくない場所を、一行で書いたもの</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="folio-num">35</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch4-summary">
+      <p class="sheet-label no-print">第4章 · まとめ</p>
+      <article class="page page-summary">
+        <div class="page-heading">
+          <h2 class="page-title">この章のまとめ</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <ul class="text-list">
+          <li><code>/add-plugin pstack</code> のあと <code>/setup-pstack</code> まで進んだ</li>
+          <li>質問は出た順に答え、モデルの最適化では止まらなかった</li>
+          <li>紙の「検証」欄に、困る条件を一行書いた</li>
+          <li>テストの全文は、まだ書いていない</li>
+        </ul>
+        <div class="callout callout-point">
+          <div class="callout-point-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" focusable="false">
+              <path d="M18 42 V18.5c0-1.4 1-2.5 2.4-2.5h.2c1.3 0 2.4 1.1 2.4 2.5V28
+M23 28 V12.2c0-1.5 1.1-2.7 2.6-2.7s2.6 1.2 2.6 2.7V28
+M28.2 28 V14.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V28
+M33.2 28 V17.2c0-1.3 1-2.4 2.3-2.4 1.4 0 2.5 1.1 2.5 2.5V30.5
+c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 22.5c-2.2-1.8-3.8-1.5-5.2.4-1.2 1.6-.4 3.4 1.2 4.2L18 29"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="callout-body">
+            <p class="callout-kicker callout-point-kicker">ポイント</p>
+            <p>検証の一行が残ったら、次の章で三つの置き場を一本につなぎます。差分の中身は、そのあとで見ます。</p>
+          </div>
+        </div>
+        <p class="next-hint">次の章へ — 三種をつなぐ</p>
         <div class="folio-num">36</div>
       </article>
     </section>
 
-    <!-- 12 奥付 -->
+    <section class="sheet-wrap" id="ch5">
+      <p class="sheet-label no-print">第5章 · 章扉</p>
+      <article class="page page-chapter">
+        <div class="chapter-center chapter-center-text">
+          <p class="chapter-num-text">5</p>
+          <h2 class="chapter-title-text">三種をつなぐ</h2>
+          <p class="chapter-sub-text">方針 → 実装 → 検証</p>
+        </div>
+        <div class="folio-num">37</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5-body-1">
+      <p class="sheet-label no-print">第5章 · 5.1 概要</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第5章 三種をつなぐ</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">5.1</span>
+          <h3 class="sec-title">概要</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>電子書籍の作業と衛生ログを、同じ司令塔で見ています。箱は分けています。Go の前に実装を始めない、という一点だけは、どちらの案件でも変えていません。見取り図は単純です。方針は Grok Bot。実装は Project。検証の一行は pstack。同じチャットに三つを戻しません。</p>
+          <p>新規の案件を増やしたくなる日はあります。その日に箱を先に作ると、夜にはまた「作って」だけが残ります。増やす前に Go を取る。No-Go なら、箱も検証の一行も要りません。衛生ログの通知を足したくなった夜が、ちょうどそれでした。司令塔で No-Go にして、箱は開きませんでした。</p>
+        </div>
+        <div class="folio-num">38</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5-body-2">
+      <p class="sheet-label no-print">第5章 · 5.2 やってみよう</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第5章 三種をつなぐ</span>
+        </div>
+        <div class="section-head section-head-text">
+          <span class="sec-num-text">5.2</span>
+          <h3 class="sec-title">やってみよう</h3>
+          <div class="mark-tick"></div>
+        </div>
+        <div class="body-prose">
+          <p>小さなタスクを一つだけ通します。衛生ログの「閉店後は写真必須」のままで構いません。新しい機能は足しません。紙の三欄を横に置きます。</p>
+          <p>司令塔で、Go か No-Go を取ります。実装コードは書かせません。Chapter 2 で送った依頼のままで足ります。No-Go なら、理由を一行残して、ここで終わります。成功です。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。司令塔に Go または No-Go が残った画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: コードが混ざっていない短いメモだけを見る。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">39</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5-body-2b">
+      <p class="sheet-label no-print">第5章 · 5.2 箱に渡す</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第5章 三種をつなぐ</span>
+        </div>
+        <div class="body-prose">
+          <p>Go なら、その一行を Project に渡します。「範囲外はやらない」を添えます。Chapter 3 で開いた箱があれば、それを使います。今日は新しい箱を増やしません。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-label figure-box-sm">
+            <span class="figure-placeholder">画面プレースホルダ。既存の Project に方針の一行を渡した画面。実画面のキャプチャではない。</span>
+          </div>
+          <p class="caption">図: 箱は増やさず、残してある箱にメモを渡す。（プレースホルダ）</p>
+        </div>
+        <div class="folio-num">40</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5-body-2c">
+      <p class="sheet-label no-print">第5章 · 5.2 三つ残す</p>
+      <article class="page page-body">
+        <div class="running-head">
+          <span class="running-text">第5章 三種をつなぐ</span>
+        </div>
+        <div class="body-prose">
+          <p>差分を見る前に、検証の一行を読み返します。Chapter 4 で書いたものがあれば、今日のタスクに合っているかだけ見ます。合っていなければ書き直します。衛生ログなら「写真がアップロードできなかったとき、その回のチェックは残す」。テストの全文は、まだ書きません。</p>
+          <p>通ったあとに残るものは三つです。司令塔の短いメモ。Project の箱の名前。検証の一行。どれか欠けていたら、その欄に戻ります。三つ揃ったら、この章は終わりです。</p>
+        </div>
+        <div class="folio-num">41</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5-terms">
+      <p class="sheet-label no-print">第5章 · キーワード早見</p>
+      <article class="page page-table">
+        <div class="running-head">
+          <span class="running-text">第5章 三種をつなぐ</span>
+        </div>
+        <div class="page-heading">
+          <h2 class="page-title">キーワード早見</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <p class="caption">あとから見返す用です。厳密な定義ではなく、この本でのたとえです。</p>
+        <table class="text-table">
+          <thead>
+            <tr>
+              <th>ことば</th>
+              <th>この本でのたとえ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>一本のルート</td>
+              <td>方針のメモ、箱の名前、検証の一行が揃った状態</td>
+            </tr>
+            <tr>
+              <td>同じ司令塔</td>
+              <td>電子書籍とアプリの Go を、一つの方針スレッドで見る</td>
+            </tr>
+            <tr>
+              <td>箱を増やさない</td>
+              <td>Go の前に、新しい Project を作らない</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="folio-num">42</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="ch5-summary">
+      <p class="sheet-label no-print">第5章 · まとめ</p>
+      <article class="page page-summary">
+        <div class="page-heading">
+          <h2 class="page-title">この章のまとめ</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <ul class="text-list">
+          <li>小さなタスク一つで、方針から検証の一行まで通した</li>
+          <li>No-Go なら、そこで終えてよい</li>
+          <li>Go なら、既存の箱にメモを渡し、新しい箱は作らなかった</li>
+          <li>残ったのは、司令塔のメモ、箱の名前、検証の一行</li>
+        </ul>
+        <div class="callout callout-point">
+          <div class="callout-point-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" focusable="false">
+              <path d="M18 42 V18.5c0-1.4 1-2.5 2.4-2.5h.2c1.3 0 2.4 1.1 2.4 2.5V28
+M23 28 V12.2c0-1.5 1.1-2.7 2.6-2.7s2.6 1.2 2.6 2.7V28
+M28.2 28 V14.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V28
+M33.2 28 V17.2c0-1.3 1-2.4 2.3-2.4 1.4 0 2.5 1.1 2.5 2.5V30.5
+c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 22.5c-2.2-1.8-3.8-1.5-5.2.4-1.2 1.6-.4 3.4 1.2 4.2L18 29"
+                fill="none" stroke="#2f9e5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="callout-body">
+            <p class="callout-kicker callout-point-kicker">ポイント</p>
+            <p>三つ揃った夜は、差分の中身を見ても迷子になりにくいです。本命の案件でも、この順だけ守ります。</p>
+          </div>
+        </div>
+        <p class="next-hint">次はおわりに — 本命の案件で回すときのメモ</p>
+        <div class="folio-num">43</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="outro">
+      <p class="sheet-label no-print">おわりに</p>
+      <article class="page page-outro">
+        <div class="page-heading">
+          <h2 class="page-title">おわりに</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <div class="body-prose">
+          <p>次に本命の案件で回すとき、見るのはこの三点だけです。</p>
+          <p>新規の案件は、Go の前に箱を増やさない。増やしたくなったら、司令塔で一行残してからにする。</p>
+          <p>実装は、Go のメモが残ってから開く。メモが無い夜は、差分を見ない。</p>
+          <p>検証の困る条件は、差分を見る前に一行。テストの全文は、そのあとでいい。</p>
+          <p>三種は、並べるために分けたのではありません。夜にスレッドを読み返して、決めたことがどこにあるか分かるように分けました。衛生ログでも、この電子書籍でも、同じです。</p>
+        </div>
+        <div class="outro-sign">
+          <p>中川 将広</p>
+          <p>2026年9月</p>
+        </div>
+        <div class="folio-num">44</div>
+      </article>
+    </section>
+
     <section class="sheet-wrap" id="colophon">
-      <p class="sheet-label no-print">12 · 奥付</p>
+      <p class="sheet-label no-print">奥付</p>
       <article class="page page-colophon">
         <div class="colophon-stack colophon-stack-text">
-          <p class="colophon-title">サンプル書籍タイトル</p>
-          <p>2026 年第1版</p>
-          <p>検証環境: macOS / ローカル起動</p>
-          <p>対象: 非エンジニア寄りの実践入門</p>
-          <p class="colophon-note">画面や仕様は更新により変わることがあります。</p>
+          <p class="colophon-title">三種の神器 超入門</p>
+          <p>Grok Bot・Cursor Projects・pstackで、方針と実装を分けてみよう</p>
+          <p>中川 将広</p>
+          <p>2026年9月 第1版</p>
+          <p class="colophon-note">画面のキャプチャはプレースホルダです。実画面は載せていません。メニューの文言は、更新で変わることがあります。</p>
         </div>
+        <div class="folio-num">45</div>
       </article>
     </section>
 
