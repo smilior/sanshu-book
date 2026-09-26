@@ -1,37 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 520" width="1280" height="520">
   <rect width="1280" height="520" fill="#FFFEFA"/>
-
   <rect x="36" y="48" width="340" height="424" rx="18" fill="#f7fcf9" stroke="#2f9e5f" stroke-width="3"/>
-  <text x="206" y="128" text-anchor="middle" fill="#2f9e5f" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="32" font-weight="700">z��4@</text>
-  <text x="206" y="178" text-anchor="middle" fill="#5a5550" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="22">Grok Bot</text>
+  <text x="206" y="128" text-anchor="middle" fill="#2f9e5f" font-family="Noto Sans CJK JP, sans-serif" font-size="32" font-weight="700">決める場所</text>
+  <text x="206" y="178" text-anchor="middle" fill="#5a5550" font-family="Noto Sans CJK JP, sans-serif" font-size="22">Grok Bot</text>
   <line x1="88" y1="214" x2="324" y2="214" stroke="#c8e6d4" stroke-width="1.5"/>
-  <text x="206" y="268" text-anchor="middle" fill="#3A3630" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="22">��`Q�nO</text>
-  <text x="206" y="312" text-anchor="middle" fill="#3A3630" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="22">Go L��~g</text>
-  <text x="206" y="350" text-anchor="middle" fill="#3A3630" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="22">\�jD</text>
+  <text x="206" y="268" text-anchor="middle" fill="#3A3630" font-family="Noto Sans CJK JP, sans-serif" font-size="22">方針を短く残す</text>
+  <text x="206" y="312" text-anchor="middle" fill="#3A3630" font-family="Noto Sans CJK JP, sans-serif" font-size="22">Go / No-Go</text>
+  <text x="206" y="356" text-anchor="middle" fill="#3A3630" font-family="Noto Sans CJK JP, sans-serif" font-size="22">実装コードは書かない</text>
 
   <rect x="470" y="48" width="340" height="424" rx="18" fill="#FFFEFA" stroke="#c8c4bc" stroke-width="2"/>
-  <text x="640" y="128" text-anchor="middle" fill="#6e6a64" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="32" font-weight="700">\�4@</text>
-  <text x="640" y="178" text-anchor="middle" fill="#5a5550" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="22">Cursor Projects</text>
+  <text x="640" y="128" text-anchor="middle" fill="#6e6a64" font-family="Noto Sans CJK JP, sans-serif" font-size="32" font-weight="700">作る場所</text>
+  <text x="640" y="178" text-anchor="middle" fill="#5a5550" font-family="Noto Sans CJK JP, sans-serif" font-size="22">Cursor Projects</text>
   <line x1="522" y1="214" x2="758" y2="214" stroke="#d8d4cc" stroke-width="1.5"/>
-  <text x="640" y="268" text-anchor="middle" fill="#3A3630" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="22">�~c_�ݒ</text>
-  <text x="640" y="312" text-anchor="middle" fill="#3A3630" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="22">!Y�</text>
-  <text x="640" y="350" text-anchor="middle" fill="#3A3630" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="22">���oSSg�</text>
+  <text x="640" y="268" text-anchor="middle" fill="#3A3630" font-family="Noto Sans CJK JP, sans-serif" font-size="22">長い案件の箱</text>
+  <text x="640" y="312" text-anchor="middle" fill="#3A3630" font-family="Noto Sans CJK JP, sans-serif" font-size="22">固まったあとで任せる</text>
+  <text x="640" y="356" text-anchor="middle" fill="#3A3630" font-family="Noto Sans CJK JP, sans-serif" font-size="22">方針スレッドとは別</text>
 
   <rect x="904" y="48" width="340" height="424" rx="18" fill="#FFFEFA" stroke="#c8c4bc" stroke-width="2"/>
-  <text x="1074" y="128" text-anchor="middle" fill="#6e6a64" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="32" font-weight="700"><nnM�</text>
-  <text x="1074" y="178" text-anchor="middle" fill="#5a5550" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="22">pstack</text>
+  <text x="1074" y="128" text-anchor="middle" fill="#6e6a64" font-family="Noto Sans CJK JP, sans-serif" font-size="32" font-weight="700">検証の置き方</text>
+  <text x="1074" y="178" text-anchor="middle" fill="#5a5550" font-family="Noto Sans CJK JP, sans-serif" font-size="22">pstack</text>
   <line x1="956" y1="214" x2="1192" y2="214" stroke="#d8d4cc" stroke-width="1.5"/>
-  <text x="1074" y="268" text-anchor="middle" fill="#3A3630" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="22">��a��</text>
-  <text x="1074" y="312" text-anchor="middle" fill="#3A3630" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="22">Hk�O</text>
-  <text x="1074" y="350" text-anchor="middle" fill="#3A3630" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="22">�DfK��UjD</text>
+  <text x="1074" y="268" text-anchor="middle" fill="#3A3630" font-family="Noto Sans CJK JP, sans-serif" font-size="22">困る条件を先に</text>
+  <text x="1074" y="312" text-anchor="middle" fill="#3A3630" font-family="Noto Sans CJK JP, sans-serif" font-size="22">動いてから直さない</text>
+  <text x="1074" y="356" text-anchor="middle" fill="#3A3630" font-family="Noto Sans CJK JP, sans-serif" font-size="22">置き場を決めておく</text>
 
   <line x1="384" y1="250" x2="458" y2="250" stroke="#2f9e5f" stroke-width="3"/>
   <polygon points="458,242 474,250 458,258" fill="#2f9e5f"/>
   <rect x="392" y="196" width="72" height="32" rx="8" fill="#FFFEFA"/>
-  <text x="428" y="218" text-anchor="middle" fill="#2f9e5f" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="18">!Y</text>
+  <text x="428" y="218" text-anchor="middle" fill="#2f9e5f" font-family="Noto Sans CJK JP, sans-serif" font-size="18">渡す</text>
 
   <line x1="818" y1="250" x2="892" y2="250" stroke="#8a8578" stroke-width="2.5"/>
   <polygon points="892,243 906,250 892,257" fill="#8a8578"/>
   <rect x="824" y="196" width="80" height="32" rx="8" fill="#FFFEFA"/>
-  <text x="864" y="218" text-anchor="middle" fill="#6e6a64" font-family="WenQuanYi Micro Hei, Noto Sans CJK JP, sans-serif" font-size="18">HknO</text>
+  <text x="864" y="218" text-anchor="middle" fill="#6e6a64" font-family="Noto Sans CJK JP, sans-serif" font-size="18">先に書く</text>
 </svg>
