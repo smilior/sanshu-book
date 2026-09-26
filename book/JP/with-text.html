@@ -56,12 +56,12 @@
         </div>
         <ol class="toc-list-text">
           <li><span class="toc-label">はじめに</span><span class="toc-leader"></span><span class="toc-page">3</span></li>
-          <li><span class="toc-num">1</span><span class="toc-label">三種の神器の全体像</span><span class="toc-leader"></span><span class="toc-page">6</span></li>
-          <li><span class="toc-num">2</span><span class="toc-label">Grok Bot — 方針と Go/No-Go の司令塔</span><span class="toc-leader"></span><span class="toc-page">13</span></li>
-          <li><span class="toc-num">3</span><span class="toc-label">Cursor Projects — 長い案件の箱</span><span class="toc-leader"></span><span class="toc-page">22</span></li>
-          <li><span class="toc-num">4</span><span class="toc-label">pstack — 検証を先に置く</span><span class="toc-leader"></span><span class="toc-page">30</span></li>
-          <li><span class="toc-num">5</span><span class="toc-label">三種をつなぐ — 方針 → 実装 → 検証</span><span class="toc-leader"></span><span class="toc-page">37</span></li>
-          <li><span class="toc-label">おわりに</span><span class="toc-leader"></span><span class="toc-page">44</span></li>
+          <li><span class="toc-num">1</span><span class="toc-label">三種の神器の全体像</span><span class="toc-leader"></span><span class="toc-page">8</span></li>
+          <li><span class="toc-num">2</span><span class="toc-label">Grok Bot — 方針と Go/No-Go の司令塔</span><span class="toc-leader"></span><span class="toc-page">15</span></li>
+          <li><span class="toc-num">3</span><span class="toc-label">Cursor Projects — 長い案件の箱</span><span class="toc-leader"></span><span class="toc-page">24</span></li>
+          <li><span class="toc-num">4</span><span class="toc-label">pstack — 検証を先に置く</span><span class="toc-leader"></span><span class="toc-page">32</span></li>
+          <li><span class="toc-num">5</span><span class="toc-label">三種をつなぐ — 方針 → 実装 → 検証</span><span class="toc-leader"></span><span class="toc-page">39</span></li>
+          <li><span class="toc-label">おわりに</span><span class="toc-leader"></span><span class="toc-page">46</span></li>
         </ol>
         <div class="folio-num">2</div>
       </article>
@@ -75,11 +75,10 @@
           <div class="mark-line mark-line-heading"></div>
         </div>
         <div class="body-prose">
-          <p>会社員をしながら、空き時間に小さなアプリを作っています。飲食店向けの日次衛生チェックと写真証拠を残す「衛生ログ」もその一つでした。要件は大きくないのに、チャットがしんどくなった時期があります。</p>
-          <p>朝は「写真はいつ必須にするか」を決めるつもりだった。昼すぎにはテーブルのカラム名を直していて、夜にはボタンを右に寄せた差分を見ている。Go した記憶がない。No-Go した記憶もない。ある夜、スレッドを最初から読み直したら、写真必須の条件が言い方を変えて三回出てきた。どれが最終か分からない。ボタンの話のあいだに、「そもそもその画面を出すのか」と迷っている一文が挟まっている。進めているつもりで、決めていなかった。</p>
-          <p>AI に聞けば返ってくる。それは知っていた。返ってくる場所が一つだと、判断と実装の境目が溶ける。止まっているつもりはないのに進んでいる実感もない、という状態が続いた。ログは長い。決まったことは短い。</p>
-          <p>混線をほどきたくて、手元の道具を分けてみた。この本でいう三種の神器です。名前は大げさです。中身は地味です。</p>
-          <p>いま方針と Go / No-Go を置いているのは <strong>Grok Bot</strong> です。実装コードは書かせない。専門家や Cursor の Project に振る。衛生ログでは、写真必須の条件も日次の締め方も、ここで固めてから先に出しました。「作って」より前に、「やるか」「どこまでか」を残す。Go が出るまで実装側には触らない。夜に読み返すときの迷子が減ったのは、決まったことが短いメモで残るようになったからだと思います。</p>
+          <p>会社員をしながら、空き時間に小さなアプリを作っています。要件は大きくないのに、チャットがしんどくなった時期があります。</p>
+          <p>朝は「これをやるか」を決めるつもりだった。昼すぎには画面の並びを直していて、夜にはボタンの位置を変えた差分を見ている。やる、と決めた記憶がない。やらない、と決めた記憶もない。</p>
+          <p>ある夜、スレッドを最初から読み直した。同じ問いが、言い方を変えて三回出てくる。どれが最終か分からない。そのあいだに、実装の断片が挟まっている。進めているつもりで、決めていなかった。</p>
+          <p>長い案件を一人で抱えていると、こうなりやすいです。判断と実装が、同じチャットに溶ける。</p>
         </div>
         <div class="folio-num">3</div>
       </article>
@@ -93,9 +92,13 @@
           <div class="mark-line mark-line-heading"></div>
         </div>
         <div class="body-prose">
-          <p>実装は <strong>Cursor Projects</strong> に渡すようにしました。長い案件の箱、という感覚です。リポ単位で抱えられて、並列にもできる。方針が固まったあとで任せる。司令塔のスレッドにコードを書き始めない。混線していたころは、方針メモのすぐ下に差分が並んでいて、決定と試行錯誤の区別がつかなかった。箱が分かれるだけで、朝の判断が夕方まで残ることが増えました。衛生ログ本体と別件の小さな改善を同じ頭で抱えないためにも助かっています。一つの箱に全部を詰め込むとまた混線する、というのは何度かやってから覚えました。</p>
-          <p>検証の置き方には <strong>pstack</strong> を入れています。Cursor のプラグインで、入れ方は <code>/add-plugin pstack</code> のあと <code>/setup-pstack</code>。細かい設定は本編に回します。僕が掴んでいるのは、「動いてから困るより、困る条件を先に書いておく」ための道具、くらいです。衛生ログでも、写真アップロードの失敗を後から直すより、先に検証の置き場を決めておいた方が手戻りが少なかった。完璧なテスト設計の話ではない。困る場所を先にメモする、という感覚に近いです。</p>
-          <p>三種をきれいに並べると製品紹介になります。言いたいのは優劣ではない。同じチャットに全部を載せない、ということだけです。方針は Grok Bot。実装は Cursor Projects。検証の置き方は pstack。混ぜない。電子書籍の作業とアプリの案件を同じ司令塔で見ている今も、Go 前に実装を始めない一点は変えていません。新規案件を増やしたくなる日はある。増やす前に Go を取る、と決めておくと夜の自分が楽です。</p>
+          <p>ログは長い。決まったことは短い。返ってくる場所が一つだと、境目が溶けます。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-wide figure-box-img figure-box-entry">
+            <img src="images/preface-chat.png" alt="同じスレッドに、決める話と作る話が並んだチャット" />
+          </div>
+          <p class="caption">図: 同じスレッドに、決める話と作る話が並んでいる。最終の一文は残っていない</p>
         </div>
         <div class="folio-num">4</div>
       </article>
@@ -109,12 +112,52 @@
           <div class="mark-line mark-line-heading"></div>
         </div>
         <div class="body-prose">
-          <p>マニュアルの要約ではありません。混線していた場所から、手元で分け直した記録に近いです。Chapter では全体像、それぞれの使い方、最後に一本につなぐ流れまで進みます。画面が要る節は画面を載せます。紙に三欄を書くだけ、という節もあります。</p>
-          <p>頭にある読者は、Grok Bot と Cursor を使い始めていて、長い案件を一人で抱え、方針と実装が同じ場所に溜まって疲れている人です。インストール手順の本でも、公式ヘルプの言い換えでもありません。</p>
-          <p>「決める場所」と「作る場所」を分けたい人に、三種の置き方が届けばいい。全体像から見ていきます。</p>
+          <p>混ぜない、だけでした。決める場所、作る場所、検証の置き方。この本でいう三種の神器です。名前は大げさです。中身は地味です。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-wide figure-box-img">
+            <img src="images/preface-split.png" alt="同じ場所に全部を載せたときと、三つに分けたあとの対比" />
+          </div>
+          <p class="caption">図: 同じ場所に全部を載せたときと、三つに分けたあと</p>
+        </div>
+        <div class="folio-num">5</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="preface-4">
+      <p class="sheet-label no-print">はじめに · 4</p>
+      <article class="page page-preface">
+        <div class="page-heading">
+          <h2 class="page-title">はじめに</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <div class="body-prose">
+          <p>最初に残すのは、決める場所です。作る場所と、検証の置き方は、そのあとです。</p>
+        </div>
+        <div class="figure-block">
+          <div class="figure-box figure-box-wide figure-box-img figure-box-roles">
+            <img src="images/preface-roles.png" alt="決める場所、作る場所、検証の置き方の関係" />
+          </div>
+          <p class="caption">図: 決める場所から、作る場所、検証の置き方へ渡す。緑は最初に残す場所</p>
+        </div>
+        <div class="folio-num">6</div>
+      </article>
+    </section>
+
+    <section class="sheet-wrap" id="preface-5">
+      <p class="sheet-label no-print">はじめに · 5</p>
+      <article class="page page-preface">
+        <div class="page-heading">
+          <h2 class="page-title">はじめに</h2>
+          <div class="mark-line mark-line-heading"></div>
+        </div>
+        <div class="body-prose">
+          <p>いま方針を置いているのは <strong>Grok Bot</strong> です。やるか、どこまでか、を短く残す場所で、実装コードは書かせません。固まった一文は <strong>Cursor Projects</strong> に渡します。長い案件を抱える箱で、方針のスレッドとは別に開きます。困る条件は <strong>pstack</strong> に先に書きます。動いてから直すより、置き場を決めておく道具です。入れ方は本編に回します。</p>
+          <p>同じチャットに三つを戻さない。それだけです。マニュアルの要約ではありません。Chapter では全体像から、それぞれの使い方、最後に一本につなぐところまで進みます。</p>
+          <p>頭にある読者は、Grok Bot と Cursor を使い始めていて、長い案件を一人で抱え、方針と実装が同じ場所に溜まって疲れている人です。</p>
         </div>
         <p class="preface-footnote">2026年9月に書いています。画面の文言やメニューの場所は、読んだころには動いているかもしれません。見た目は変わる前提で読んでください。</p>
-        <div class="folio-num">5</div>
+        <div class="folio-num">7</div>
       </article>
     </section>
 
@@ -126,7 +169,7 @@
           <h2 class="chapter-title-text">三種の神器の全体像</h2>
           <p class="chapter-sub-text">方針・実装・検証を、同じチャットに載せない</p>
         </div>
-        <div class="folio-num">6</div>
+        <div class="folio-num">8</div>
       </article>
     </section>
 
@@ -146,7 +189,7 @@
           <p>足りなかったのは道具の数ではなかった、と今は思います。どこで方針を固めて、どこで実装し、どこで困る条件を先に書いておくか。置き場がなかった。三種の神器と呼んでいるものは、その分け方です。名前は大げさです。やっていることは地味です。</p>
           <p>方針と Go / No-Go は <strong>Grok Bot</strong> に置いています。実装コードは書かせない。専門家や Cursor の Project に振る。衛生ログでは、写真必須の条件も日次の締め方も、ここで固めてから先に出しました。「作って」より前に、「やるか」「どこまでか」を短いメモで残す。Go が出るまで実装側には触らない。夜に読み返して迷子になる回数が減ったのは、決まったことが短く残るようになったからだと思います。</p>
         </div>
-        <div class="folio-num">7</div>
+        <div class="folio-num">9</div>
       </article>
     </section>
 
@@ -161,7 +204,7 @@
           <p>検証の置き場には <strong>pstack</strong> を入れています。Cursor のプラグインで、入れ方は <code>/add-plugin pstack</code> のあと <code>/setup-pstack</code>。細かい設定は Chapter 4 に回します。掴んでいるのは、「動いてから困るより、困る条件を先に書いておく」ための道具、くらいです。衛生ログでも、写真アップロードの失敗を後から直すより、先に検証の置き場を決めておいた方が手戻りが少なかった。完璧なテスト設計ではない。困る場所を先にメモする、という感覚です。</p>
           <p>きれいに並べると製品紹介になります。言いたいのは優劣ではない。同じチャットに全部を載せない、ということだけです。方針・実装・検証を混ぜると、また朝の決定が夜の差分に埋もれます。電子書籍の作業とアプリの案件を同じ司令塔で見ている今も、Go 前に実装を始めない一点は変えていません。</p>
         </div>
-        <div class="folio-num">8</div>
+        <div class="folio-num">10</div>
       </article>
     </section>
 
@@ -182,7 +225,7 @@
           <p>まず「方針」の欄に、いま決めたいことだけを書きます。やるかやらないか。どこまでやるか。やらない範囲。衛生ログなら、「閉店後のチェックでは写真必須」「開店前は任意」といった一文です。コードの話は書かない。カラム名も書かない。ボタンの位置も書かない。決めることだけです。書けないなら、まだ方針が固まっていない、という事実が残ります。それも十分です。</p>
           <p>次に「実装」の欄へ。方針が固まったあとで触る箱を書きます。リポ名でも、Cursor の Project 名でも、「衛生ログ本体の箱」でもいい。いまは名前がなくて構いません。大事なのは、方針の欄に書いたことを実装の欄に移さないこと。混ぜない練習です。</p>
         </div>
-        <div class="folio-num">9</div>
+        <div class="folio-num">11</div>
       </article>
     </section>
 
@@ -197,7 +240,7 @@
           <p>三欄が埋まったら、一度読み返します。方針の欄に実装の話が混ざっていないか。実装の欄に Go / No-Go が混ざっていないか。検証の欄が「あとで考える」になっていないか。混ざっていたら、線を引き直して移します。完璧である必要はありません。混ぜない、という一点だけ確認します。</p>
           <p>この三欄は、このあとの章でも戻ってきます。Grok Bot に渡すのは方針の欄。Cursor Projects に渡すのは実装の欄。pstack で先に書くのは検証の欄。画面の手順はこれから一つずつ見ます。いまは、手元で分けた、という状態があれば十分です。</p>
         </div>
-        <div class="folio-num">10</div>
+        <div class="folio-num">12</div>
       </article>
     </section>
 
@@ -246,7 +289,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="folio-num">11</div>
+        <div class="folio-num">13</div>
       </article>
     </section>
 
@@ -282,7 +325,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
         </div>
         <p class="next-hint">次の章へ — Grok Bot</p>
-        <div class="folio-num">12</div>
+        <div class="folio-num">14</div>
       </article>
     </section>
 
@@ -294,7 +337,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <h2 class="chapter-title-text">Grok Bot</h2>
           <p class="chapter-sub-text">方針と Go/No-Go の司令塔</p>
         </div>
-        <div class="folio-num">13</div>
+        <div class="folio-num">15</div>
       </article>
     </section>
 
@@ -313,7 +356,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <p>Chapter 1 の三欄でいうと、ここは「方針」の欄の話です。衛生ログを進めていたころ、僕が一番つまずいたのは実装そのものではなかった。写真はいつ必須にするか。閉店後だけか、開店前もか。日次の締めは誰が押すか。答えは頭のどこかにあるのに、チャットへ投げるとすぐカラム名やボタンの話に流れます。決まった気がする。翌朝読むと「作って」だけが残っている。</p>
           <p>そこに置いているのが Grok Bot です。方針と Go / No-Go。司令塔、と呼んでいます。実装コードは書かせない。専門家や Cursor の Project に振る。衛生ログでは、写真必須の条件も締め方も、ここで一文にしてから先に出しました。「やるか」「どこまでか」「やらない範囲」が短いメモで残るまで、実装側には触らない。夜に読み返して迷子になる回数が減ったのは、決まったことが短く残るようになったからだと思います。</p>
         </div>
-        <div class="folio-num">14</div>
+        <div class="folio-num">16</div>
       </article>
     </section>
 
@@ -327,7 +370,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <p>何でも答えてくれる場所、という意味ではありません。答えてくれる場所が一つだと、判断と実装の境目が溶ける。僕がやっているのは逆です。ここには方針だけを載せる。コードの断片は貼らないし、テーブル設計の相談もボタンの位置も、このスレッドではやらない。固まったら実装は Project に渡す。振る先は案件によって違って、衛生ログ本体なら Cursor の箱、別の専門家がいるならそちらです。司令塔のログに差分が混ざらないことだけが、僕にとっては大事でした。</p>
           <p>電子書籍の作業とアプリの案件を同じ司令塔で見ている今も、Go の前に実装を始めない一点は変えていません。新規案件を増やしたくなる日はある。増やす前に Go を取る、と決めておくと夜の自分が楽です。機能一覧を並べるつもりはありません。掴んでいる使い方だけを書きます。</p>
         </div>
-        <div class="folio-num">15</div>
+        <div class="folio-num">17</div>
       </article>
     </section>
 
@@ -352,7 +395,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
           <p class="caption">図: 方針用のスレッドを開く。実装用のチャットと混ぜない。（プレースホルダ）</p>
         </div>
-        <div class="folio-num">16</div>
+        <div class="folio-num">18</div>
       </article>
     </section>
 
@@ -373,7 +416,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
           <p class="caption">図: 「実装コードは書かないで」と「Go / No-Go」を一文に入れて送る。（プレースホルダ）</p>
         </div>
-        <div class="folio-num">17</div>
+        <div class="folio-num">19</div>
       </article>
     </section>
 
@@ -393,7 +436,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
           <p class="caption">図: 決まったことが短く残っているかだけ見る。コードが混ざっていたら依頼をやり直す。（プレースホルダ）</p>
         </div>
-        <div class="folio-num">18</div>
+        <div class="folio-num">20</div>
       </article>
     </section>
 
@@ -407,7 +450,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <p>自分のメモへ一言写しておきます。紙の「方針」欄でもメモアプリでもいい。「Go。閉店後は写真必須。開店前は任意。通知は今回やらない」。日付がなくても、案件名があれば後から追えます。司令塔のスレッドは消さない。あとで「あれ、必須にしたんだっけ」と迷ったときに戻れる場所が一つある。それがこの章のゴールです。</p>
           <p>実装の画面はまだ開きません。Go の前に差分を見始めると、また朝の決定が夜の試行錯誤に埋もれます。箱を開くのは次の章です。いまは、方針と Go / No-Go が短い形で残っていれば十分です。</p>
         </div>
-        <div class="folio-num">19</div>
+        <div class="folio-num">21</div>
       </article>
     </section>
 
@@ -448,7 +491,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
             </tr>
           </tbody>
         </table>
-        <div class="folio-num">20</div>
+        <div class="folio-num">22</div>
       </article>
     </section>
 
@@ -484,7 +527,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
         </div>
         <p class="next-hint">次の章へ — Cursor Projects</p>
-        <div class="folio-num">21</div>
+        <div class="folio-num">23</div>
       </article>
     </section>
 
@@ -496,7 +539,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <h2 class="chapter-title-text">Cursor Projects</h2>
           <p class="chapter-sub-text">長い案件の箱</p>
         </div>
-        <div class="folio-num">22</div>
+        <div class="folio-num">24</div>
       </article>
     </section>
 
@@ -515,7 +558,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <p>Chapter 2 で Go のメモが残ったあと、僕が開くのは Cursor Projects です。長い案件の箱、という感覚です。衛生ログ本体は一つの箱にしています。電子書籍の作業は、別の箱です。同じ頭で抱えないために分けています。</p>
           <p>リポ単位で抱えられて、並列にもできる、というのがいまの使い方です。方針が固まったあとで任せる。司令塔のスレッドに差分を書き始めない。混線していたころは、方針メモのすぐ下に試行錯誤が並んでいました。箱が分かれると、朝の Go が夕方の差分に埋もれにくくなります。衛生ログの写真必須と、別件のボタン位置を、同じ箱で直していた夜が一番読めませんでした。</p>
         </div>
-        <div class="folio-num">23</div>
+        <div class="folio-num">25</div>
       </article>
     </section>
 
@@ -528,7 +571,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
         <div class="body-prose">
           <p>何でも入る作業机、という意味ではありません。箱を開く条件は、Go のメモがあることだけです。No-Go の案件に箱は作りません。作ったとしても、中でコードは始めません。一つの箱に全部を詰め込むとまた混線する。衛生ログ本体と、別件の小さな改善を同じ Project に入れたときに、もう一度覚えました。</p>
         </div>
-        <div class="folio-num">24</div>
+        <div class="folio-num">26</div>
       </article>
     </section>
 
@@ -553,7 +596,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
           <p class="caption">図: 実装を渡す箱を一つ開く。方針用のスレッドとは別。（プレースホルダ）</p>
         </div>
-        <div class="folio-num">25</div>
+        <div class="folio-num">27</div>
       </article>
     </section>
 
@@ -572,7 +615,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
           <p class="caption">図: 司令塔で残した一行を、箱に渡す。範囲外はやらない、と添える。（プレースホルダ）</p>
         </div>
-        <div class="folio-num">26</div>
+        <div class="folio-num">28</div>
       </article>
     </section>
 
@@ -591,7 +634,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
           <p class="caption">図: 差分が方針の範囲に収まっているかだけ見る。（プレースホルダ）</p>
         </div>
-        <div class="folio-num">27</div>
+        <div class="folio-num">29</div>
       </article>
     </section>
 
@@ -628,7 +671,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
             </tr>
           </tbody>
         </table>
-        <div class="folio-num">28</div>
+        <div class="folio-num">30</div>
       </article>
     </section>
 
@@ -664,7 +707,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
         </div>
         <p class="next-hint">次の章へ — pstack</p>
-        <div class="folio-num">29</div>
+        <div class="folio-num">31</div>
       </article>
     </section>
 
@@ -676,7 +719,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <h2 class="chapter-title-text">pstack</h2>
           <p class="chapter-sub-text">検証を先に置く</p>
         </div>
-        <div class="folio-num">30</div>
+        <div class="folio-num">32</div>
       </article>
     </section>
 
@@ -695,7 +738,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <p>三欄の残りの一つが、ここです。僕が pstack と呼んでいるのは、Cursor のプラグインです。入れ方は <code>/add-plugin pstack</code> のあと <code>/setup-pstack</code>。完璧なテスト設計の話ではありません。動いてから困るより、困る条件を先に書いておくための道具、という掴み方をしています。</p>
           <p>衛生ログでは、写真のアップロードに失敗したあとで直すより、「失敗したとき、その回のログは残すか」を先に一行書いておいた方が手戻りが少なかった。Chapter 3 の箱で差分を見始める前に、その一行の置き場を決めます。モデルを誰に振るか、といった細かい答えはセットアップの質問に任せます。この章で残したいのは、コマンドが通ったことと、困る場所の名前です。</p>
         </div>
-        <div class="folio-num">31</div>
+        <div class="folio-num">33</div>
       </article>
     </section>
 
@@ -719,7 +762,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
           <p class="caption">図: プラグインを入れる。入った表示が出るまで待つ。（プレースホルダ）</p>
         </div>
-        <div class="folio-num">32</div>
+        <div class="folio-num">34</div>
       </article>
     </section>
 
@@ -738,7 +781,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
           <p class="caption">図: セットアップの質問は、出た順に答える。最適化は後回しでよい。（プレースホルダ）</p>
         </div>
-        <div class="folio-num">33</div>
+        <div class="folio-num">35</div>
       </article>
     </section>
 
@@ -751,7 +794,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
         <div class="body-prose">
           <p>進んだら、紙の「検証」欄の一行を書きます。衛生ログなら「写真がアップロードできなかったとき、その回のチェックは残す」。テストの全文は書きません。差分を開く前に、困る場所の名前が残っていれば、この章は終わりです。</p>
         </div>
-        <div class="folio-num">34</div>
+        <div class="folio-num">36</div>
       </article>
     </section>
 
@@ -792,7 +835,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
             </tr>
           </tbody>
         </table>
-        <div class="folio-num">35</div>
+        <div class="folio-num">37</div>
       </article>
     </section>
 
@@ -828,7 +871,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
         </div>
         <p class="next-hint">次の章へ — 三種をつなぐ</p>
-        <div class="folio-num">36</div>
+        <div class="folio-num">38</div>
       </article>
     </section>
 
@@ -840,7 +883,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <h2 class="chapter-title-text">三種をつなぐ</h2>
           <p class="chapter-sub-text">方針 → 実装 → 検証</p>
         </div>
-        <div class="folio-num">37</div>
+        <div class="folio-num">39</div>
       </article>
     </section>
 
@@ -859,7 +902,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <p>電子書籍の作業と衛生ログを、同じ司令塔で見ています。箱は分けています。Go の前に実装を始めない、という一点だけは、どちらの案件でも変えていません。見取り図は単純です。方針は Grok Bot。実装は Project。検証の一行は pstack。同じチャットに三つを戻しません。</p>
           <p>新規の案件を増やしたくなる日はあります。その日に箱を先に作ると、夜にはまた「作って」だけが残ります。増やす前に Go を取る。No-Go なら、箱も検証の一行も要りません。衛生ログの通知を足したくなった夜が、ちょうどそれでした。司令塔で No-Go にして、箱は開きませんでした。</p>
         </div>
-        <div class="folio-num">38</div>
+        <div class="folio-num">40</div>
       </article>
     </section>
 
@@ -884,7 +927,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
           <p class="caption">図: コードが混ざっていない短いメモだけを見る。（プレースホルダ）</p>
         </div>
-        <div class="folio-num">39</div>
+        <div class="folio-num">41</div>
       </article>
     </section>
 
@@ -903,7 +946,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
           <p class="caption">図: 箱は増やさず、残してある箱にメモを渡す。（プレースホルダ）</p>
         </div>
-        <div class="folio-num">40</div>
+        <div class="folio-num">42</div>
       </article>
     </section>
 
@@ -917,7 +960,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <p>差分を見る前に、検証の一行を読み返します。Chapter 4 で書いたものがあれば、今日のタスクに合っているかだけ見ます。合っていなければ書き直します。衛生ログなら「写真がアップロードできなかったとき、その回のチェックは残す」。テストの全文は、まだ書きません。</p>
           <p>通ったあとに残るものは三つです。司令塔の短いメモ。Project の箱の名前。検証の一行。どれか欠けていたら、その欄に戻ります。三つ揃ったら、この章は終わりです。</p>
         </div>
-        <div class="folio-num">41</div>
+        <div class="folio-num">43</div>
       </article>
     </section>
 
@@ -954,7 +997,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
             </tr>
           </tbody>
         </table>
-        <div class="folio-num">42</div>
+        <div class="folio-num">44</div>
       </article>
     </section>
 
@@ -990,7 +1033,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           </div>
         </div>
         <p class="next-hint">次はおわりに — 本命の案件で回すときのメモ</p>
-        <div class="folio-num">43</div>
+        <div class="folio-num">45</div>
       </article>
     </section>
 
@@ -1012,7 +1055,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <p>中川 将広</p>
           <p>2026年9月</p>
         </div>
-        <div class="folio-num">44</div>
+        <div class="folio-num">46</div>
       </article>
     </section>
 
@@ -1026,7 +1069,7 @@ c0 4.8-2.6 9-8.2 11.2L28 43.5H20.5c-1.6 0-2.5-1.2-2.5-2.5z"
           <p>2026年9月 第1版</p>
           <p class="colophon-note">画面のキャプチャはプレースホルダです。実画面は載せていません。メニューの文言は、更新で変わることがあります。</p>
         </div>
-        <div class="folio-num">45</div>
+        <div class="folio-num">47</div>
       </article>
     </section>
 
